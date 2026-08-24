@@ -13,17 +13,14 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  font-weight: bold;
+  font-style: normal;
+  font-weight: 500;
 }
 
 main {
   max-width: 80%;
   margin: 20px auto;
   padding: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Georgia', serif;
 }
 
 h2 {
@@ -34,19 +31,28 @@ p {
   margin-bottom: .5em;
 }
 
-div {
+strong {
+  font-weight: 600;
+}
+
+.caption {
   margin: 20px;
   font-size: .9em;
   text-align: center;
 }
 
 
-img {
+p img {
   max-width: 50%;
   height: auto;
   display: block;
   margin: 20px auto;
   border-radius: 3em;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
 }
 
 main ul {

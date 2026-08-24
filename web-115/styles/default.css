@@ -7,9 +7,15 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 300;
   font-size: 1em;
   line-height: 1.6em;
   padding: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Georgia', serif;
 }
 
