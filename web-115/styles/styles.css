@@ -27,6 +27,20 @@ h2 {
   margin-bottom: 1em;
 }
 
+h4 {
+  margin-bottom: .5em;
+}
+
+h4 em {
+  color: #71AA8E;
+}
+
+
+h6 {
+  font-size: .9em;
+  font-weight: 400;
+}
+
 p {
   margin-bottom: .5em;
 }
@@ -41,6 +55,49 @@ strong {
   text-align: center;
 }
 
+div div {
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+
+.typography {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+
+div div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20%;
+  gap: .25em;
+}
+
+div div div img {
+  max-width: 92px;
+  height: auto;
+  display: block;
+}
+
+.hex {
+  font-weight: 600;
+}
+
+.wordmark {
+  max-width: 32em;
+  height: auto;
+  display: block;
+}
+
+div div div p {
+  text-align: center;
+  font-size: .8em;
+  line-height: .75em;
+}
 
 p img {
   max-width: 50%;
