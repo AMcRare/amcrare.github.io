@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angela McCrary-Roffis's Adventurous Musk Rat ~ WEB-115 ~ Brand Board</title>
+  
+  <title>Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB-115 &#10051; Brand Board</title>
 
   <link rel="icon" type="image/svg" href="images/favicon.svg" />
 
@@ -19,7 +20,7 @@
 </head>
 <body>
   <header>
-      <h1>Angela McCrary-Roffis's Adventurous Musk Rat ~ WEB-115</h1>
+      <h1>Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB-115</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -42,7 +43,11 @@
         <h4>Logo and Icon</h4>
         <div>
           <div>
-            <img src="images/LogoDefault.svg" alt="McRoffis Designs Logo" class="wordmark"/>
+            <picture>
+              <source srcset="images/LogoDefault.svg" media="(prefers-color-scheme: light)" class="wordmark"/>
+              <source srcset="images/LogoDarkMode.svg" media="(prefers-color-scheme: dark)" class="wordmark" />
+              <img src="images/LogoDefault.svg" alt="McRoffis Designs Logo" class="wordmark"/>
+            </picture>
             <p>Wordmark</p>
           </div>
           <div>
@@ -56,28 +61,44 @@
         <h4>Color Palette</h4>
         <div>
           <div>
-            <img src="images/darksSwatch.svg" alt="Zucchini Swatch"/>
+            <picture>
+              <source srcset="images/darksSwatch.svg" media="(prefers-color-scheme: light)" />
+              <source srcset="images/darkSwatchDM.svg" media="(prefers-color-scheme: dark)" />
+              <img src="images/darksSwatch.svg" alt="Zucchini Swatch"/>
+            </picture>
             <h5>Darks</h5>
             <h6>Zucchini</h6>
             <p class="hex">#003D20</p>
             <p>Will be used for heading and body fonts, as well as shadows and other dark subtle elements.</p>
           </div>
           <div>
-            <img src="images/lightsSwatch.svg" alt="Almost White Swatch"/>
+            <picture>
+              <source srcset="images/lightsSwatch.svg" media="(prefers-color-scheme: light)" />
+              <source srcset="images/lightsSwatchDM.svg" media="(prefers-color-scheme: dark)" />
+              <img src="images/lightsSwatch.svg" alt="Almost White Swatch"/>
+            </picture>
             <h5>Lights</h5>
             <h6>Almost White</h6>
             <p class="hex">#F9F7F4</p>
-            <p>Will be used for backgrounds and light subtle elements.</p>
+            <p>Will be used for backgrounds, as well as glows and light subtle elements.</p>
           </div>
           <div>
-            <img src="images/accentsSwatch.svg" alt="Matte Mint Swatch"/>
+            <picture>
+              <source srcset="images/accentsSwatch.svg" media="(prefers-color-scheme: light)" />
+              <source srcset="images/accentsSwatchDM.svg" media="(prefers-color-scheme: dark)" />
+              <img src="images/accentsSwatch.svg" alt="Matte Mint Swatch"/>
+            </picture>
             <h5>Accents</h5>
             <h6>Matte Mint</h6>
             <p class="hex">#71AA8E</p>
             <p>Will be used for buttons, links, and other interactive or accented elements.</p>
           </div>
           <div>
-            <img src="images/neutralsSwatch.svg" alt="Fluorescent Gray Swatch"/>
+            <picture>
+              <source srcset="images/neutralsSwatch.svg" media="(prefers-color-scheme: light)" />
+              <source srcset="images/neutralsSwatchDM.svg" media="(prefers-color-scheme: dark)" />
+              <img src="images/neutralsSwatch.svg" alt="Fluorescent Gray Swatch"/>
+            </picture>
             <h5>Neutrals</h5>
             <h6>Fluorescent Gray</h6>
             <p class="hex">#CED6D2</p>
@@ -107,7 +128,8 @@
         </ul>
       </nav>
       <div>
-        <p><em>Page built by McRoffis Designs</em></p>
+        <p>Certified in</p>
+        <p><em>Page designed by McRoffis Designs</em></p>
       </div>
     </footer>
 

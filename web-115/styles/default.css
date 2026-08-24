@@ -6,6 +6,13 @@
   background-color: #F9F7F4;
 }
 
+@media (prefers-color-scheme: dark) {
+  * {
+    color: #F9F7F4;
+    background-color: #003D20;
+  }
+}
+
 body {
   font-family: Raleway, Arial, sans-serif;
   font-weight: 300;
