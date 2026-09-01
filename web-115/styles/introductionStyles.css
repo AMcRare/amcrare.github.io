@@ -1,0 +1,90 @@
+/* Color Hex Codes */
+/* Dark: #003D20 */
+/* Light: #F9F7F4 */
+/* Brand: #71AA8E */
+/* Accent: #557A66 */
+/* Neutral: #CED6D2 */
+
+header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+}
+
+main {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: .5em;
+}
+
+
+figure {
+  max-width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+figure img {
+  width: 80%;
+  border-radius: 3em;
+}
+
+figcaption {
+  margin: 20px;
+  font-style: italic;
+  font-size: .75em;
+  text-align: center;
+}
+
+main ul {
+  list-style: disc;
+  padding-left: 4em;
+}
+
+ul ol {
+  list-style: decimal;
+  padding-left: 2em;
+  font-size: 0.9em;
+}
+
+a {
+  text-decoration: none;
+  color: #557A66;
+}
+
+blockquote {
+  font-style: normal;
+  margin: 20px;
+  padding: 20px;
+  border-left: 4px solid #71AA8E;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8em;
+}

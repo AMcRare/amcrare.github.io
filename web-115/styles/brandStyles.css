@@ -1,3 +1,10 @@
+/* Color Hex Codes */
+/* Dark: #003D20 */
+/* Light: #F9F7F4 */
+/* Brand: #71AA8E */
+/* Accent: #557A66 */
+/* Neutral: #CED6D2 */
+
 header {
   padding: 20px 0;
   text-align: center;
@@ -32,7 +39,7 @@ h4 {
 }
 
 h4 em {
-  color: #71AA8E;
+  color: #557A66;
 }
 
 
@@ -57,13 +64,13 @@ hr {
   margin: 2em 0;
 }
 
-.caption {
-  margin: 20px;
-  font-size: .9em;
-  text-align: center;
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
-div div {
+section div {
   display: flex;
   gap: 3em;
   flex-wrap: wrap;
@@ -77,7 +84,7 @@ div div {
   margin-bottom: .5em;
 }
 
-div div div {
+section div div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +92,7 @@ div div div {
   gap: .25em;
 }
 
-div div div img {
+section div div img {
   max-width: 92px;
   height: auto;
   display: block;
@@ -107,7 +114,7 @@ div div div p {
   line-height: .75em;
 }
 
-p img {
+figure {
   max-width: 50%;
   height: auto;
   display: block;
