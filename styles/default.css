@@ -1,0 +1,35 @@
+/* Color Hex Codes */
+/* Black Forest: #283618 */
+/* Olive Leaf: #606C38 */
+/* Cornsilk: #FEFAE0 */
+/* Light Caramel: #DDA15E */
+/* Copper: #BC6C25 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #283618;
+  background-color: #FEFAE0;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    color: #FEFAE0;
+    background-color: #283618;
+  }
+}
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.6em;
+  padding: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+}
+
