@@ -39,18 +39,24 @@ header {
   text-align: center;
 }
 
-img {
-  max-width: 1em;
-  height: auto;
-  margin-right: 8px;
-}
-
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 10px 0;
+}
+
+img {
+  margin-right: 8px;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+.institution {
+  height: 3em;
+  overflow: hidden;
+  margin-left: -1em;
 }
 
 nav a {
