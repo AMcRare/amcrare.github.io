@@ -1,2 +1,3 @@
 # amcrare.github.io
-CPCC Courses
+
+This is a website to collect my work from Springboard, Merit America, and my CPCC Courses.

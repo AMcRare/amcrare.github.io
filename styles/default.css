@@ -31,5 +31,96 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Libre Baskerville', 'Georgia', serif;
+  margin-bottom: 0.5em;
 }
 
+header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+img {
+  max-width: 1em;
+  height: auto;
+  margin-right: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+article h4 {
+  height: 3em;
+  overflow: hidden;
+}
+
+article p {
+  height: 40%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+hr {
+  width: 3px;
+  max-height: 50%;
+  background-color: #DDA15E;
+  background: linear-gradient(to bottom, #DDA15E00, #DDA15EFF, #DDA15E00);
+}
+
+div {
+  margin: 20px;
+  font-size: .9em;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #BC6C25;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8em;
+}
