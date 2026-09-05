@@ -39,31 +39,6 @@ header {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-}
-
-img {
-  margin-right: 8px;
-  font-family: 'Lato', Arial, sans-serif;
-  font-size: 0.8em;
-}
-
-.institution {
-  height: 3em;
-  overflow: hidden;
-  margin-left: -1em;
-}
-
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
 main {
   max-width: 80%;
   margin: 20px auto;
@@ -87,9 +62,31 @@ section {
   padding: 20px;
 }
 
+.institution, .degree, .year{
+  display: flex;
+  align-items: center;
+}
+
+.institution {
+  height: 3em;
+  overflow: hidden;
+  margin-left: -1em;
+}
+
+img {
+  margin-right: 8px;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.8em;
+}
+
 .degree {
   height: 3em;
   overflow: hidden;
+}
+
+.description {
+  margin-bottom: 0.75em;
+  font-size: 0.8em;
 }
 
 .course {
@@ -97,10 +94,7 @@ section {
 }
 
 section p {
-  height: 40%;
-  overflow: hidden;
-  margin-bottom: 0;
-  font-size: 0.8em;
+
 }
 
 p em {
@@ -136,4 +130,12 @@ footer {
   text-align: center;
   padding: 20px 0;
   font-size: 0.8em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  list-style-type: none;
+  padding: 0;
 }
