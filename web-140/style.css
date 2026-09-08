@@ -1,0 +1,330 @@
+/* ========================================
+COLOR PALETTE
+======================================== */
+/* Dark: #003D20 */
+/* Light: #F9F7F4 */
+/* Brand: #71AA8E */
+/* Accent: #557A66 */
+/* Neutral: #CED6D2 */
+
+
+/* ========================================
+GENERAL STYLES
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Raleway, Arial, sans-serif;
+  line-height: 1.6;
+	background-color: #F9F7F4;
+	color: #003D20;
+}
+
+
+/* ========================================
+NAVIGATION
+======================================== */
+
+.navbar {
+  background-color: #557A66;
+  padding: 15px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+	flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #F9F7F4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+	text-decoration: underline;
+}
+
+.navbar a:focus {
+	outline: 2px solid #CED6D2;
+	outline-offset: 8px;
+	border-radius: 4px;
+}
+
+.navbar a:active {
+	color: #003D20;
+}
+
+.navbar a:visited {
+	color: #CED6D2;
+}
+
+
+/* ========================================
+HERO SECTION
+======================================== */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to top, #71AA8E 5%, #557A66);
+	border-bottom: 8px double #F9F7F4;
+}
+
+.hero h1 {
+	font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #003D20;
+  color: #F9F7F4;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.hero-btn:hover {
+  background-color: #557A66;
+}
+
+.hero-btn:active {
+	background-color: #71AA8E;
+}
+
+.hero-btn:focus {
+	outline: 2px solid #CED6D2;
+	outline-offset: 4px;
+}
+
+.hero-btn:visited {
+  background-color: #CED6D2;
+	color: #003D20;
+}
+
+/* ========================================
+ABOUT SECTION
+======================================== */
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #F9F7F4;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+	display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #71AA8E;
+}
+
+.about-text strong {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-weight: 500;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+	font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+}
+
+
+/* ========================================
+JAVASCRIPT BUTTON
+======================================== */
+
+#welcomeButton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #003D20;
+  color: #F9F7F4;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#welcomeButton:hover {
+  background-color: #557A66;
+}
+
+#welcomeButton:focus {
+	outline: 2px solid #CED6D2;
+	outline-offset: 4px;
+}
+
+#welcomeButton:active {
+	background-color: #71AA8E;
+}
+
+#welcomeButton:visited {
+	background-color: #CED6D2;
+	color: #003D20;
+}
+
+#message {
+	height: 1.25rem;
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 300;
+	margin-top: 30px;
+}
+
+/* ========================================
+SKILLS SECTION
+======================================== */
+
+.skills-section {
+  padding: 20px;
+  background-color: #71AA8E;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	border-top: 8px double #F9F7F4;
+	border-bottom: 8px double #F9F7F4;
+}
+
+.skills-section h2 {
+	font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+	line-height: 1.2rem;
+}
+
+.skills-section h3 {
+	font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+}
+
+.skills-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.skills-list:not(:first-child) {
+	margin-top: 20px;
+}
+
+.skills-list:last-child {
+	margin-bottom: 40px;
+}
+
+.skills-list ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 15px;
+	padding: 0;
+	margin: 0;
+	justify-content: left;
+	font-size: 0.875rem;
+}
+
+.skills-list li:not(:last-child):after {
+	content: "\002743";
+	padding-left: 10px;
+	aria-hidden: true;
+}
+
+/* ========================================
+PROJECTS SECTION
+======================================== */
+
+.projects-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects-section h2 {
+	font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+}
+
+.assignment-buttons {
+  max-width: 900px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.assignment-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #003D20;
+	color: #F9F7F4;
+	text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.assignment-buttons a:hover {
+  transform: translateY(-2px);
+  background-color: #557A66;
+}
+
+.assignment-buttons a:focus {
+	outline: 2px solid #CED6D2;
+	outline-offset: 4px;
+}
+
+.assignment-buttons a:active {
+	background-color: #71AA8E;
+}
+
+.assignment-buttons a:visited {
+	background-color: #CED6D2;
+	color: #003D20;
+}
+
+
+/* ========================================
+RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
