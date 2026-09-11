@@ -5,25 +5,6 @@
 /* Accent: #557A66 */
 /* Neutral: #CED6D2 */
 
-header {
-  padding: 20px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-}
-
-nav a {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-}
-
 main {
   max-width: 80%;
   margin: 20px auto;
@@ -143,8 +124,3 @@ a {
   color: #557A66;
 }
 
-footer {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.8em;
-}

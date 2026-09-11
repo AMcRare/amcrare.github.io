@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 0</title>
+
+    <link rel="icon" type="image/svg" href="images/favicon.svg" />
+
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+    <link rel="stylesheet" type="text/css" href="styles/fizzbuzzStyles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Validation -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div data-include="components/header.html"></div>
+    <main>
+      <h2>Fizz Buzz 0</h2>
+      <h3>McRoffis Designs Fizz Buzz</h3>
+
+      <section>
+        <h4 id="greeting">Welcome to McRoffis Designs!</h4>
+        <form id="name-entry">
+          <fieldset>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="John"/>
+            <label for="middle-initial">Middle Initial:</label>
+            <input type="text" id="middle-initial" name="middle-initial" maxlength="1" placeholder="J"/>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Doe"/>
+          </fieldset>
+          <button type="submit" method="POST">Continue</button>
+        </form>
+      </section>
+      <section>
+        <h4 id="start-message"></h4>
+        <form id="number-entry">
+          <fieldset>
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number" placeholder="1"/>
+          </fieldset>
+          <button type="submit" method="POST">Count</button>
+        </form>
+      </section>
+      <section id="results">
+        <h4 id="results-message"></h4>
+        <div id="output"></div>
+        <button id="reset" type="button">Reset</button>
+      </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+
+    <!-- Load game script -->
+    <script src="scripts/fizzbuzz.js"></script>
+    
+    <!-- Load header and footer using JavaScript -->
+    <script src="scripts/includes.js"></script>
+    
+    <!-- Validation -->
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
+  </body>
+</html>

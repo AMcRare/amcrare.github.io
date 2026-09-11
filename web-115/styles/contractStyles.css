@@ -1,21 +1,9 @@
-header {
-  padding: 20px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-}
-
-nav a {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-}
+/* Color Hex Codes */
+/* Dark: #003D20 */
+/* Light: #F9F7F4 */
+/* Brand: #71AA8E */
+/* Accent: #557A66 */
+/* Neutral: #CED6D2 */
 
 main {
   max-width: 80%;
@@ -32,8 +20,3 @@ a {
   color: #557A66;
 }
 
-footer {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.8em;
-}

@@ -1,0 +1,103 @@
+/* Color Hex Codes */
+/* Dark: #003D20 */
+/* Light: #F9F7F4 */
+/* Brand: #71AA8E */
+/* Accent: #557A66 */
+/* Neutral: #CED6D2 */
+
+#number-entry {
+  display: none;
+}
+
+#results {
+  display: none;
+}
+
+main {
+  width: 80%;
+  margin: 0.5em auto;
+  padding: 1em;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+}
+
+h4 {
+  text-align: left;
+  margin: 1em 0 0.5em 0;
+  color: #557A66;
+  padding: 0.5em;
+}
+
+fieldset {
+  border: 5px double #CED6D2;
+  border-radius: 10px;
+  padding: 2em 1em;
+  margin-bottom: 1em;
+}
+
+label {
+  display: inline-block;
+  font-size: 0.875em;
+  width: 25%;
+}
+
+input {
+  display: inline-block;
+  width: 70%;
+  padding: 0.25em;
+  margin-bottom: 1em;
+  border: 1px solid #CED6D2;
+  border-radius: 5px;
+  font-family: 'Raleway', Arial ,sans-serif;
+}
+
+input::placeholder {
+  color: #003D2050;
+  font-family: 'Raleway', Arial ,sans-serif;
+}
+
+button {
+  font-family: 'Playfair Display', Georgia, sans-serif;
+  display: block;
+  width: 20%;
+  padding: 0.5em;
+  margin: 1em auto;
+  background-color: #003D20;
+  color: #F9F7F4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #71AA8E;
+  color: #F9F7F4;
+}
+
+button:active {
+  background-color: #557A66;
+  color: #F9F7F4;
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+  border: 5px double #003D20;
+  border-radius: 10px;
+  padding: 1em;
+  gap: 0.25em;
+}
+
+#output, #output p {
+  background-color: #CED6D2;
+  font-family: 'Raleway', Arial ,sans-serif;
+  font-weight: 400;
+}
