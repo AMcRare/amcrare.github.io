@@ -64,6 +64,12 @@ input::placeholder {
   font-family: 'Raleway', Arial ,sans-serif;
 }
 
+input:focus {
+  outline: none;
+  border-color: #71AA8E;
+  box-shadow: 0 0 5px #71AA8E;
+}
+
 button {
   font-family: 'Playfair Display', Georgia, sans-serif;
   display: block;
