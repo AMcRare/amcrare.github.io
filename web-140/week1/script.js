@@ -20,5 +20,5 @@ buttons.forEach(button => {
 
 const scoreButton = document.getElementById("score");
 scoreButton.addEventListener("click", () => {
-  alert("Your score is: ${score} out of 5");
+  alert(`Your score is: ${score} out of 5`);
 });
