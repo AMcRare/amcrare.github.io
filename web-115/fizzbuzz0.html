@@ -21,8 +21,14 @@
     <div data-include="components/header.html"></div>
     <main>
       <h2>Fizz Buzz 0</h2>
-      <h3>McRoffis Designs Fizz Buzz</h3>
-
+      <div class="logo-container">
+        <picture>
+          <source srcset="images/LogoDefault.svg" media="(prefers-color-scheme: light)" class="wordmark"/>
+          <source srcset="images/LogoDarkMode.svg" media="(prefers-color-scheme: dark)" class="wordmark" />
+          <img src="images/LogoDefault.svg" alt="McRoffis Designs Logo" class="wordmark"/>
+        </picture>
+        <h3>McRoffis Designs Fizz Buzz</h3>
+      </div>
       <section>
         <h4 id="greeting">Welcome to McRoffis Designs!</h4>
         <form id="name-entry">

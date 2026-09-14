@@ -24,8 +24,27 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+picture {
+  width: 30%;
+  margin: 0.5em 0;
+}
+
+img {
+  width: 90%;
+}
+
 h3 {
-  margin: 1em 0 0.5em 0;
+  width: 50%;
+  margin: 0.5em 0;
   text-align: center;
 }
 
