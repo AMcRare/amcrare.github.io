@@ -85,6 +85,7 @@ section div div img {
 
 .wordmark {
   max-width: 32em;
+  margin-left: -2.5em;
   height: auto;
   display: block;
 }
