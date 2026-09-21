@@ -16,7 +16,7 @@
 main {
   width: 80%;
   margin: 0.5em auto;
-  padding: 1em;
+  padding: 1em 0;
 }
 
 h2 {
@@ -30,7 +30,7 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   margin: 1em;
-  padding: 0.5em;
+  padding: 0.5em 0;
 }
 
 picture {
@@ -71,7 +71,7 @@ label {
 input {
   display: inline-block;
   width: 70%;
-  padding: 0.25em;
+  padding: 0.25em 0;
   margin-bottom: 1em;
   border: 1px solid #CED6D2;
   border-radius: 5px;
@@ -93,7 +93,7 @@ button {
   font-family: 'Playfair Display', Georgia, sans-serif;
   display: block;
   width: 20%;
-  padding: 0.5em;
+  padding: 0.5em 0;
   margin: 1em auto;
   background-color: #003D20;
   color: #F9F7F4;
