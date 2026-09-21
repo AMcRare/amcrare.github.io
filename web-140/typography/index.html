@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography & Font Pairing</title>
+<!-- Google Fonts
+  Mockup 1 suggestions: Playfair Display + DM Sans
+  Students may use other fonts. If you use a Google Font that is not listed here, add it to the Google Fonts link below.
+-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat+Brush&family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+		<script>document.addEventListener('DOMContentLoaded', function() {
+			if (document.documentElement.hasAttribute('lang')) {
+				document.documentElement.dataset.customLang = '';
+				return;
+			}
+			document.documentElement.setAttribute('lang', 'en-us');
+		});</script>
+		<script>document.addEventListener('DOMContentLoaded', function() {
+			if (document.head.querySelector('title')) return;
+			var handleAppendTitle = function(evt) {
+				if (!evt || !evt.data) return;
+				try {
+					var data = JSON.parse(evt.data);
+					if (data.handler !== 'd2l.iframe.requestPageTitle' || !data.pageTitle) return;
+					window.removeEventListener('message', handleAppendTitle, false);
+					var titleElm = document.createElement('title');
+					titleElm.textContent = data.pageTitle;
+					document.head.appendChild(titleElm);
+				} catch (e) {}
+			};
+			window.addEventListener('message', handleAppendTitle, false);
+			window.parent.postMessage(JSON.stringify({ handler: 'd2l.iframe.requestPageTitle' }), '*');
+		});</script>
+		<script>window.addEventListener('message', function(event) { 
+			if( !event.data ) {
+				return;
+			}
+			let params;
+			try {
+				params = JSON.parse( event.data );
+			}
+			catch {
+				return;
+			}
+			if( !params.subject || params.subject !== 'lti.frameResize' ) {
+				return;
+			}
+			const MAX_FRAME_HEIGHT = 10000;
+			if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+				console.warn( 'Invalid height value received, aborting' );
+				return;
+			}
+			const el = document.getElementsByTagName( 'iframe' );
+			for ( let i=0; i < el.length; i++ ) {
+				if( el[i].contentWindow === event.source ) {
+					el[i].style.height = params.height + 'px';
+					console.info( 'Setting iFrame height to ' + params.height );
+					if( el[i].getAttribute('lockwidth') !== 'true'){
+						el[i].style.width = '100%';
+						console.info( 'Setting iFrame width to 100%' );
+					}
+				}
+			}
+		});</script>
+		<script src="https://s.brightspace.com/lib/bsi/2026.8.278/unbundled/embeds.js" type="module"></script>
+		<script>document.addEventListener('DOMContentLoaded', function() {
+			window.D2L.EmbedRenderer.renderEmbeds(document.body);
+		});</script>
+		<script src="https://s.brightspace.com/lib/bsi/2026.8.278/unbundled/mathjax.js" type="module"></script>
+		<script>document.addEventListener('DOMContentLoaded', function() {
+			if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+				document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+					elm.setAttribute('style', 'display: block; height: 0.5rem;');
+				});
+				document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
+					const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
+					elm.replaceWith(mrow);
+				});
+				window.D2L.MathJax.loadMathJax({"renderLatex":true,"outputScale":1.5,"enableMML3Support":false});
+			}
+		});</script>
+		<script src="https://s.brightspace.com/lib/bsi/2026.8.278/unbundled/prism.js" type="module"></script>
+		<script>document.addEventListener('DOMContentLoaded', function() {
+			document.querySelectorAll('.d2l-code').forEach(code => {
+				window.D2L.Prism.formatCodeElement(code);
+			});
+		});</script>
+		<script>document.addEventListener('DOMContentLoaded', async () => {
+			document.querySelectorAll('iframe[src*="quickLink.d2l"][src*="type=lti"]').forEach(iframe => {
+				iframe.style.borderStyle = 'none';
+			});
+		});</script>
+		<script src="https://s.brightspace.com/lib/bsi/2026.8.278/unbundled/context-provider-host-factory.js" type="module"></script>
+		<script>document.addEventListener('DOMContentLoaded', async () => {
+			document.documentElement.setAttribute('data-mathjax-context', '{"renderLatex":true,"outputScale":1.5,"enableMML3Support":false}');
+			window.D2L.ContextProvider.createContextProviderHost();
+		});</script>
+		<script>
+			if (window.frameElement !== null && !document.documentElement.hasAttribute('data-oslo')) {
+				const osloSettings = {"batch":"/d2l/api/oslo/batch?languageId=1","collection":"/d2l/api/oslo/collection?languageId=1","version":"W/\"20.26.8.29533.638396676610101010\""};
+				document.documentElement.setAttribute('data-oslo', JSON.stringify(osloSettings));
+			}
+		</script>
+		<script src="https://s.brightspace.com/lib/bsi/2026.8.278/unbundled/creator.js" type="module"></script>
+		<script>document.addEventListener('DOMContentLoaded', async () => {
+			const activities = [];
+			const practices = [];
+			const allPractices = document.querySelectorAll('.d2l-practice');
+			const elements = document.querySelectorAll('.d2l-element');
+			let layouts = [...document.querySelectorAll('.d2l-cplus-layout')];
+			const tables = document.querySelectorAll('table');
+			const contentStylerStyleLinks = document.querySelectorAll('head > link[href="https://templates.lcs.brightspace.com/lib/assets/css/styles.min.css"]');
+			const contentStylerOverides = document.querySelectorAll('head > link[href^="/d2l/le/contentstyler/"][data-override="override"]');
+			layouts = layouts.filter((layout) => layout.closest('.d2l-element.mceNonEditable') === null);
+			for (const practice of allPractices) {
+				const activityContainer = practice.hasAttribute('data-d2l-activity-href');
+				if (activityContainer) {
+					activities.push(practice);
+				}
+				else {
+					practices.push(practice);
+				}
+			}
+			if (layouts.length > 0) {
+				window.D2L.Creator.convertLayouts(layouts);
+			}
+			if (elements.length > 0) {
+				window.D2L.Creator.convertElements(elements, 6606, '/content/', true);
+			}
+			if (activities.length > 0) {
+				window.D2L.Creator.convertPracticeActivities(activities, 6606, '/content/');
+			}
+			if (practices.length > 0) {
+				window.D2L.Creator.convertPractices(practices, 6606, '/content/');
+			}
+			if (contentStylerStyleLinks.length > 0 && contentStylerOverides.length > 0 && tables.length > 0) {
+				window.D2L.Creator.wrapTables(tables);
+			}
+		});</script>
+		<script>function lti_launch( vars, target ) {
+			var query = '';
+			var new_tab = false;
+			for(var key in vars) {
+				if(query.length == 0) {
+					query += '?' + key + '=' + encodeURIComponent(vars[key]);
+				}
+				else {
+					query += '&' + key + '=' + encodeURIComponent(vars[key]);
+				}
+			}
+			var url = '/d2l/customization/pearsonlti/6606/Launch' + query;(target == '_blank') ? window.open( url, '_blank' ) : location.replace( url );
+		}</script>
+	</head>
+
+	<body>
+<!-- ========================================
+  HEADER
+========================================= -->
+	  <header class="site-header">
+      <h1>Typography & Font Pairing</h1>
+      <p>Exploring typography, hierarchy, readability, and visual style</p>
+    </header>
+
+<!-- ========================================
+  NAVIGATION
+========================================= -->
+	  <nav class="main-nav">
+			<a href="../index.html" id="home">Home</a>
+			<ul>
+      	<li><a href="#editorial">Editorial</a></li>
+      	<li><a href="#minimal">Modern Minimal</a></li>
+      	<li><a href="#creative">Creative</a></li>
+      	<li><a href="#professional">Professional</a></li>
+			</ul>
+    </nav>
+
+		<main>
+<!-- ========================================
+  MOCKUP 1 - EDITORIAL
+========================================= -->
+      <section id="editorial" class="mockup editorial">
+        <div class="mockup-label">
+          <span>Mockup 1</span>
+          <span>Editorial</span>
+        </div>
+        <div class="mockup-content">
+          <p class="eyebrow">TYPOGRAPHY STUDY</p>
+          <h2>The Art of Simplicity</h2>
+          <h3>Less clutter. More meaning.</h3>
+          <p class="body-text">Good design does not always need more elements. Sometimes, the most effective design comes from thoughtful typography, intentional spacing, and a clear visual hierarchy.</p>
+					<a href="#" class="text-link">Explore the idea →</a>
+        </div>
+      </section>
+
+<!-- ========================================
+  MOCKUP 2 - MODERN MINIMAL
+========================================= -->
+      <section id="minimal" class="mockup minimal">
+        <div class="mockup-label">
+          <span>Mockup 2</span>
+          <span>Modern Minimal</span>
+        </div>
+        <div class="mockup-content">
+          <p class="eyebrow">TYPOGRAPHY STUDY</p>
+					<h2>the continuous learner</h2>
+					<h3>Why Wouldn't You Want To Know More?</h3>
+					<p class="body-text">I love to read and I am always seeking out new and interesting information. It's so much fun to think about how all of the knowledge in the world can be consumed through different combinations of the same letters, numbers, musical notes, etc.<br>Everything is made of building blocks.</p>
+					<a href="#" class="text-link">Learn more →</a>
+				</div>
+      </section>
+
+<!-- ========================================
+  MOCKUP 3 - CREATIVE
+========================================= -->
+      <section id="creative" class="mockup creative">
+        <div class="mockup-label">
+          <span>Mockup 3</span>
+          <span>Creative</span>
+        </div>
+        <div class="mockup-content">
+          <p class="eyebrow">TYPOGRAPHY STUDY</p>
+					<h2>Art Is Subjective</h2>
+					<h3>That's what makes it fun</h3>
+					<p class="body-text">I've spent most of my life involved in art. When I think back to when I was a child, and having someone ask me what I wanted to be when I grew up, I would say an artist. I went to film school and put myself through multiple UX and UI Design bootcamps, all in pursuit of the calling. There's something so freeing about the world of "ART".<br>It's whatever you want it to be.</p>
+          <a href="#" class="text-link">Discover more →</a>
+        </div>
+      </section>
+
+<!-- ========================================
+  MOCKUP 4 - PROFESSIONAL
+========================================= -->
+	    <section id="professional" class="mockup professional">
+        <div class="mockup-label">
+          <span>Mockup 4</span>
+          <span>Professional</span>
+        </div>
+        <div class="mockup-content">
+          <p class="eyebrow">TYPOGRAPHY STUDY</p>
+					<h2>An Open Door</h2>
+					<h3>Sometimes the Knock of Opportunity<br>Is more of a whisper</h3>
+					<p class="body-text">My film career fell apart before it could really start. I didn't have the money to move states after college and they weren't making many movies where I lived anymore. I've been attempting to find that entrypoint to the arts ever since.<br>All I need now is the opportunity to put all my skills to work.</p>
+					<a href="#" class="text-link">Read more →</a>
+        </div>
+      </section>
+    </main>
+
+<!-- ========================================
+  FOOTER
+========================================= -->
+    <footer>
+      <p>Typography & Font Pairing Assignment</p>
+    </footer>
+
+<!-- JavaScript -->
+    <script src="script.js"></script>
+
+	</body>
+</html>
