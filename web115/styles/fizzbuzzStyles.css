@@ -51,12 +51,12 @@ h3 {
 h4 {
   text-align: left;
   margin: 1em 0 0.5em 0;
-  color: #557A66;
+  color: var(--accent);
   padding: 0.5em;
 }
 
 fieldset {
-  border: 5px double #CED6D2;
+  border: 5px double var(--neutral);
   border-radius: 10px;
   padding: 2em 1em;
   margin-bottom: 1em;
@@ -73,20 +73,21 @@ input {
   width: 70%;
   padding: 0.25em 0;
   margin-bottom: 1em;
-  border: 1px solid #CED6D2;
+  border: 1px solid var(--neutral);
   border-radius: 5px;
   font-family: 'Raleway', Arial ,sans-serif;
 }
 
 input::placeholder {
-  color: #003D2050;
+  color:  var(--dark);
+  opacity: 0.5;
   font-family: 'Raleway', Arial ,sans-serif;
 }
 
 input:focus {
   outline: none;
-  border-color: #71AA8E;
-  box-shadow: 0 0 5px #71AA8E;
+  border-color:  var(--brand);
+  box-shadow: 0 0 5px var(--brand);
 }
 
 button {
@@ -95,34 +96,34 @@ button {
   width: 20%;
   padding: 0.5em 0;
   margin: 1em auto;
-  background-color: #003D20;
-  color: #F9F7F4;
+  background-color: var(--dark);
+  color: var(--light);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #71AA8E;
-  color: #F9F7F4;
+  background-color: var(--brand);
+  color: var(--light);
 }
 
 button:active {
-  background-color: #557A66;
-  color: #F9F7F4;
+  background-color: var(--accent);
+  color: var(--light);
 }
 
 #output {
   display: flex;
   flex-direction: column;
-  border: 5px double #003D20;
+  border: 5px double var(--dark);
   border-radius: 10px;
   padding: 1em;
   gap: 0.25em;
 }
 
 #output, #output p {
-  background-color: #CED6D2;
+  background-color: var(--neutral);
   font-family: 'Raleway', Arial ,sans-serif;
   font-weight: 400;
 }

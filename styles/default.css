@@ -5,18 +5,26 @@
 /* Light Caramel: #DDA15E */
 /* Copper: #A75421 */
 
+:root {
+  --blackForest: #283618;
+  --oliveLeaf: #606C38;
+  --cornsilk: #FAFAE0;
+  --lightCaramel: #DDA15E;
+  --copper: #A75421;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #283618;
-  background-color: #FAFAE0;
+  color: var(--blackForest);
+  background-color: var(--cornsilk);
 }
 
 @media (prefers-color-scheme: dark) {
   * {
-    color: #FAFAE0;
-    background-color: #283618;
+    color: var(--cornsilk);
+    background-color: var(--blackForest);
   }
 }
 
@@ -101,15 +109,15 @@ p em {
   font-size: 0.75em;
   font-style: normal;
   font-weight: 400;
-  color: #606C38;
+  color: var(--oliveLeaf);
 }
 
 hr {
   border: none;
   width: 0.15em;
   max-height: 50%;
-  background-color: #DDA15E;
-  background: linear-gradient(to bottom, #DDA15E00, #DDA15EFF, #DDA15E00);
+  background-color: var(--lightCaramel);
+  background: linear-gradient(to bottom, transparent, var(--lightCaramel), transparent);
 }
 
 ul {
@@ -123,7 +131,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #A75421;
+  color: var(--copper);
 }
 
 footer {

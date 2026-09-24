@@ -54,13 +54,13 @@ ul ol {
 
 a {
   text-decoration: none;
-  color: #557A66;
+  color: var(--accent);
 }
 
 blockquote {
   font-style: normal;
   margin: 20px;
   padding: 20px;
-  border-left: 4px solid #71AA8E;
+  border-left: 4px solid var(--brand);
 }
 

@@ -20,7 +20,7 @@ h4 {
 }
 
 h4 em {
-  color: #557A66;
+  color: var(--accent);
 }
 
 
@@ -40,8 +40,8 @@ strong {
 hr {
   border: 0;
   height: 3px;
-  background-color: #71AA8E;
-  background: linear-gradient(to right, #71AA8E00, #71AA8EFF, #71AA8E00);
+  background-color: var(--brand);
+  background: linear-gradient(to right, transparent, var(--brand), transparent);
   margin: 2em 0;
 }
 
@@ -122,6 +122,6 @@ ul ol {
 
 a {
   text-decoration: none;
-  color: #557A66;
+  color: var(--accent);
 }
 

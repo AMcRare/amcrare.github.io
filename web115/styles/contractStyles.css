@@ -11,16 +11,12 @@ main {
   padding: 20px;
 }
 
-h2 {
-  margin-bottom: 1em;
-}
-
 p {
   margin-bottom: .5em;
 }
 
 a {
   text-decoration: none;
-  color: #557A66;
+  color: var(--accent);
 }
 

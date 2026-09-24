@@ -1,0 +1,128 @@
+/* Color Hex Codes */
+/* Dark: #003D20 */
+/* Light: #F9F7F4 */
+/* Brand: #71AA8E */
+/* Accent: #557A66 */
+/* Neutral: #CED6D2 */
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #CED6D2;
+  width: 100%;
+  font-size: .875rem;
+  margin-top: 1.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+thead {
+  font-size: 1rem;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+thead th {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: left;
+}
+
+thead th:first-child {
+  padding-left: 0.5rem;
+}
+
+.name {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details ul {
+  list-style: none;
+  padding-left: 2.5em;
+  padding-right: -2.5em;
+  margin: 0;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: .75rem;
+}
+
+
+summary::before {
+  content: "»";
+  display: inline-block;
+  margin: 0 0.5em;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.theory::after, .workshop::after, .lab::after {
+  font-style: italic;
+  color: var(--accent);
+  font-size: .5rem;
+  border: 1px solid var(--accent);
+  margin-left: 0.5em;
+  padding: 0.125em 0.25em;
+  border-radius: 0.25em;
+}
+
+.theory::after {
+  content: "theory";
+}
+
+.workshop::after {
+  content: "workshop";
+}
+
+.lab::after {
+  content: "lab";
+}
+
+.quiz::after, li.review::after {
+  font-style: italic;
+  color: var(--dark);
+  font-size: .5rem;
+  border: 1px solid var(--dark);
+  margin-left: 0.5em;
+  padding: 0.125em 0.25em;
+  border-radius: 0.25em;
+  background-color: var(--neutral);
+}
+
+.quiz::after {
+  content: "quiz";
+}
+
+li.review::after {
+  content: "review";
+}
+
+.steps, .week {
+  vertical-align: top;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--neutral);
+}
+
+tbody tr th {
+  height: 0;
+  border-bottom: 3px double var(--dark);
+  margin: .5rem 0;
+}
+
+
