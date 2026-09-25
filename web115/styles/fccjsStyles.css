@@ -36,7 +36,12 @@ thead th {
 }
 
 thead th:first-child {
+  width: 70%;
   padding-left: 0.5rem;
+}
+
+thead th:nth-child(2) {
+  width: 12%;
 }
 
 .name {
@@ -48,17 +53,7 @@ details summary {
   cursor: pointer;
 }
 
-details ul {
-  list-style: none;
-  padding-left: 2.5em;
-  padding-right: -2.5em;
-  margin: 0;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: .75rem;
-}
-
-
-summary::before {
+details summary::before {
   content: "»";
   display: inline-block;
   margin: 0 0.5em;
@@ -68,6 +63,20 @@ summary::before {
 
 details[open] summary::before {
   transform: rotate(90deg);
+}
+
+details ul {
+  list-style: none;
+  padding-left: 2.5em;
+  padding-right: -2.5em;
+  margin: 0;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: .75rem;
+}
+
+details ul li {
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .theory::after, .workshop::after, .lab::after {
