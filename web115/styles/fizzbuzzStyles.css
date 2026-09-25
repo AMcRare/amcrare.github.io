@@ -80,6 +80,7 @@ input {
 
 input::placeholder {
   color:  var(--dark);
+  padding-left: 0.25em;
   opacity: 0.5;
   font-family: 'Raleway', Arial ,sans-serif;
 }
@@ -126,4 +127,35 @@ button:active {
   background-color: var(--neutral);
   font-family: 'Raleway', Arial ,sans-serif;
   font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+  h2, h3, h4, h5, h6 {
+    color: var(--brand);
+  }
+
+  input {
+    background-color: var(--dark);
+  }
+
+  input::placeholder {
+    color:  var(--neutral);
+    opacity: 0.5;
+    font-family: 'Raleway', Arial ,sans-serif;
+  }
+
+  button {
+    background-color: var(--brand);
+    color: var(--light);
+  }
+
+  button:hover, button:active {
+    background-color: var(--accent);
+    color: var(--light);
+  }
+
+  #output, #output p {
+    background-color: var(--accent);
+    color: var(--light);
+  }
 }

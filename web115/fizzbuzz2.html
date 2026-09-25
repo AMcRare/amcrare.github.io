@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 1</title>
+    <title>Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 0</title>
 
     <link rel="icon" type="image/svg" href="images/favicon.svg" />
 
@@ -20,7 +20,7 @@
   <body>
     <div data-include="components/header.html"></div>
     <main>
-      <h2>Fizz Buzz 1</h2>
+      <h2>Fizz Buzz 0</h2>
       <!-- classes, ids, and divs used for styling and scripting -->
       <div class="logo-container">
         <picture>
@@ -44,6 +44,20 @@
           <button type="submit">Continue</button>
         </form>
       </section>
+      <section id="number-entry">
+        <h4 id="start-message">message here</h4>
+        <form>
+          <fieldset>
+            <label for="count">Count to:</label>
+            <input type="number" id="count" name="count" placeholder="1" min="1" required/>
+            <label for="divisor1">Divisor 1:</label>
+            <input type="number" id="divisor1" name="divisor1" placeholder="3" min="1" required/>
+            <label for="divisor2">Divisor 2:</label>
+            <input type="number" id="divisor2" name="divisor2" placeholder="5" min="1" required/>
+          </fieldset>
+          <button type="submit">Count</button>
+        </form>
+      </section>
       <section id="results">
         <h4 id="results-message">message here</h4>
         <div id="output"></div>
@@ -53,7 +67,7 @@
     <div data-include="components/footer.html"></div>
 
     <!-- Load game script -->
-    <script src="scripts/fizzbuzz1.js"></script>
+    <script src="scripts/fizzbuzz2.js"></script>
     
     <!-- Load header and footer using JavaScript -->
     <script src="scripts/includes.js"></script>

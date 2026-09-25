@@ -21,6 +21,7 @@
     <div data-include="components/header.html"></div>
     <main>
       <h2>Fizz Buzz 0</h2>
+      <!-- classes, ids, and divs used for styling and scripting -->
       <div class="logo-container">
         <picture>
           <source srcset="images/LogoDefault.svg" media="(prefers-color-scheme: light)" class="wordmark"/>
@@ -43,18 +44,18 @@
           <button type="submit">Continue</button>
         </form>
       </section>
-      <section>
-        <h4 id="start-message"> </h4>
-        <form id="number-entry">
+      <section id="number-entry">
+        <h4 id="start-message">message here</h4>
+        <form>
           <fieldset>
             <label for="number">Number:</label>
-            <input type="number" id="number" name="number" placeholder="1"/>
+            <input type="number" id="number" name="number" placeholder="1" min="1" required/>
           </fieldset>
           <button type="submit">Count</button>
         </form>
       </section>
       <section id="results">
-        <h4 id="results-message"></h4>
+        <h4 id="results-message">message here</h4>
         <div id="output"></div>
         <button id="reset" type="button">Reset</button>
       </section>
