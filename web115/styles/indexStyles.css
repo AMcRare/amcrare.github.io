@@ -1,9 +1,9 @@
-/* Color Hex Codes */
-/* Dark: #003D20 */
-/* Light: #F9F7F4 */
-/* Brand: #71AA8E */
-/* Accent: #557A66 */
-/* Neutral: #CED6D2 */
+/* Var Color Hex Codes */
+/* var(--dark): #003D20 */
+/* var(--light): #F9F7F4 */
+/* var(--brand): #71AA8E */
+/* var(--accent): #557A66 */
+/* var(--neutral): #CED6D2 */
 
 main {
   max-width: 80%;
@@ -15,6 +15,12 @@ h2 {
   margin-bottom: 1em;
 }
 
+h6 {
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  text-align: center;
+}
+
 p {
   margin-bottom: .5em;
 }
@@ -22,5 +28,47 @@ p {
 a {
   text-decoration: none;
   color: var(--accent);
+  font-weight: 600;
 }
+
+figure {
+  max-width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+figure img {
+  width: auto;
+  height: 50vh;
+  border-radius: 3em;
+}
+
+figcaption {
+  margin: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+main ul {
+  list-style: disc;
+  padding-left: 4em;
+  margin-bottom: 1em;
+}
+
+ul ol {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+blockquote {
+  font-style: normal;
+  margin: 20px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(to bottom, transparent 5%, var(--brand), transparent 95%) 1;
+}
+
 
