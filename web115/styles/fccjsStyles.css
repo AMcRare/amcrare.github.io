@@ -7,7 +7,7 @@
 
 table {
   border-collapse: collapse;
-  border: 1px solid #CED6D2;
+  border: 1px solid var(--neutral);
   width: 100%;
   font-size: .875rem;
   margin-top: 1.5rem;
@@ -130,8 +130,29 @@ tbody tr {
 
 tbody tr th {
   height: 0;
+  background-color: var(--brand);
   border-bottom: 3px double var(--dark);
   margin: .5rem 0;
 }
 
+@media (prefers-color-scheme: dark) {
+  thead th {
+    background-color: var(--accent);
+    color: var(--light);
+  }
 
+  .theory::after, .workshop::after, .lab::after {
+    color: var(--brand);
+    border: 1px solid var(--light);
+  }
+
+  .quiz::after, li.review::after {
+    color: var(--light);
+    border: 1px solid var(--light);
+    background-color: var(--accent);
+  }
+
+  tbody tr th {
+    border-bottom: 3px double var(--light);
+  }
+}
