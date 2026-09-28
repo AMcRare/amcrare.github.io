@@ -278,6 +278,7 @@ p {
 .feature-icon:hover {
   background-color: #4914b1;
   color: white;
+  border-radius: 25%;
   transform: rotate(360deg);
 }
 
