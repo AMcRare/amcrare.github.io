@@ -15,7 +15,7 @@ h2 {
   margin-bottom: 1em;
 }
 
-h4 {
+h3, h4 {
   margin-bottom: .5em;
 }
 
@@ -51,7 +51,7 @@ section {
   align-items: left;
 }
 
-section div {
+.container {
   display: flex;
   gap: 3em;
   flex-wrap: wrap;
@@ -65,7 +65,7 @@ section div {
   margin-bottom: .5em;
 }
 
-section div div {
+.swatch {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +73,7 @@ section div div {
   gap: .25em;
 }
 
-section div div img {
+.swatch img {
   max-width: 92px;
   height: auto;
   display: block;
@@ -83,17 +83,23 @@ section div div img {
   font-weight: 600;
 }
 
-.wordmark {
-  max-width: 32em;
-  margin-left: -2.5em;
-  height: auto;
+.wordmark, .icon {
   display: block;
+  margin: 0 auto;
+  height: auto;
 }
 
-div div div p {
+.wordmark {
+  max-width: 32em;
+}
+
+.icon {
+  max-width: 8em;
+}
+
+.logo p {
   text-align: center;
-  font-size: .8em;
-  line-height: .75em;
+  line-height: 1.8em;
 }
 
 figure {
