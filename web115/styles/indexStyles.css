@@ -5,12 +5,6 @@
 /* var(--accent): #557A66 */
 /* var(--neutral): #CED6D2 */
 
-main {
-  max-width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-}
-
 h2 {
   margin-bottom: 1em;
 }

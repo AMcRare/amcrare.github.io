@@ -64,6 +64,11 @@ body {
   line-height: 1.6rem;
 }
 
+main {
+  width: 80%;
+  margin: 0.5em auto;
+  padding: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', 'Georgia', serif;
@@ -71,6 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 
 strong {
   font-weight: 600;
+}
+
+input:focus, button:focus, a:focus {
+  outline: var(--accent) auto 1px;
+  border-color:  var(--brand);
+  box-shadow: 0 0 5px var(--brand);
 }
 
 footer {
