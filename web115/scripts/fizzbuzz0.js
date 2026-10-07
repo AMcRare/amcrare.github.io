@@ -28,7 +28,7 @@ const fullName = addEventListener("submit", function (event) {
       let output = "";
       output += `\n${i}. McRoffizz McRofbuzz!`;
       document.getElementById("loop-output").innerHTML += `<p>${output}</p>`;
-    };
+    }
   document.getElementById("number-entry").style.display = "block";
   if (firstName !== "") {
     document.getElementById("start-message").textContent = `How high would you like to count, ${firstName}?`;
