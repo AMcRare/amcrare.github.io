@@ -23,6 +23,12 @@ const fullName = addEventListener("submit", function (event) {
 
   document.getElementById("greeting").textContent = `Welcome to McRoffis Designs, ${fullName}!`;
   document.getElementById("name-entry").style.display = "none";
+  document.getElementById("loop-results").style.display = "block";
+  for (let i = 1; i <= 125; i++) {
+      let output = "";
+      output += `\n${i}. McRoffizz McRofbuzz!`;
+      document.getElementById("loop-output").innerHTML += `<p>${output}</p>`;
+    };
   document.getElementById("number-entry").style.display = "block";
   if (firstName !== "") {
     document.getElementById("start-message").textContent = `How high would you like to count, ${firstName}?`;
@@ -36,6 +42,7 @@ const fullName = addEventListener("submit", function (event) {
     const countValue = parseInt(countInput.value.trim());
 
     document.getElementById("number-entry").style.display = "none";
+    document.getElementById("loop-results").style.display = "none";
     document.getElementById("results").style.display = "block";
 
     document.getElementById("results-message").textContent = `Counting to ${countValue}...`;
