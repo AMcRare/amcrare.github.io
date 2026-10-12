@@ -3,8 +3,8 @@ function checkDivision(divisor1, divisor2) {
     return true;
   } else {
     return false;
-  };
-};
+  }
+}
 
 const fullName = addEventListener("submit", function (event) {
   event.preventDefault();
@@ -17,16 +17,16 @@ const fullName = addEventListener("submit", function (event) {
   var fullName = "";
   if (firstName !== "") {
     fullName += firstName;
-  };
+  }
   if (middleInitial !== "") {
     fullName += " " + middleInitial + ".";
-  };
+  }
   if (lastName !== "") {
     fullName += " " + lastName;
-  };
+  }
   if (fullName === "") {
     fullName = "My dear Guest";
-  };
+  }
 
   document.getElementById("greeting").textContent = `Welcome to McRoffis Designs, ${fullName}!`;
   document.getElementById("name-entry").style.display = "none";
@@ -35,7 +35,7 @@ const fullName = addEventListener("submit", function (event) {
     document.getElementById("start-message").textContent = `How high would you like to count, ${firstName}, and what are your two divisors?`;
   } else {
     document.getElementById("start-message").textContent = `How high would you like to count, and what are your two divisors?`;
-  };
+  }
 
   const count = this.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -63,10 +63,10 @@ const fullName = addEventListener("submit", function (event) {
         output += `\n${i}. McRofbuzz`;
       } else {
         output += `\n${i}.`;
-      };
+      }
       output = output.trim();
       document.getElementById("output").innerHTML += `<p>${output}</p>`;
-    };
+    }
   });
 
   const reset = document.getElementById("reset");

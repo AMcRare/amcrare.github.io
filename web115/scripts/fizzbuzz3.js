@@ -3,8 +3,8 @@ function checkDivision(divisor1, divisor2) {
     return true;
   } else {
     return false;
-  };
-};
+  }
+}
 
 const fullName = addEventListener("submit", function (event) {
   event.preventDefault();
@@ -17,16 +17,16 @@ const fullName = addEventListener("submit", function (event) {
   var fullName = "";
   if (firstName !== "") {
     fullName += firstName;
-  };
+  }
   if (middleInitial !== "") {
     fullName += " " + middleInitial + ".";
-  };
+  }
   if (lastName !== "") {
     fullName += " " + lastName;
-  };
+  }
   if (fullName === "") {
     fullName = "My dear Guest";
-  };
+  }
 
   document.getElementById("greeting").textContent = `Welcome to McRoffis Designs, ${fullName}!`;
   document.getElementById("name-entry").style.display = "none";
@@ -39,16 +39,16 @@ const fullName = addEventListener("submit", function (event) {
     let output = `${i}. `;
     if (checkDivision(i, 3)) {
       output += "McRoffizz ";
-    };
+    }
     if (checkDivision(i, 5)) {
       output += "McRoffbuzz ";
-    };
+    }
     if (checkDivision(i, 7)) {
       output += "McRoffbang ";
-    };
+    }
     output = output.trim(); // Remove any trailing space
     document.getElementById("output").innerHTML += `<p>${output}</p>`;
-  };
+  }
 
   const reset = document.getElementById("reset");
 
