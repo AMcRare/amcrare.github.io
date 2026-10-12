@@ -1,3 +1,11 @@
+function checkDivision(divisor1, divisor2) {
+  if (divisor1 % divisor2 === 0) {
+    return true;
+  } else {
+    return false;
+  };
+};
+
 const fullName = addEventListener("submit", function (event) {
   event.preventDefault();
   const firstNameInput = document.getElementById("first-name");
@@ -9,17 +17,16 @@ const fullName = addEventListener("submit", function (event) {
   var fullName = "";
   if (firstName !== "") {
     fullName += firstName;
-  }
+  };
   if (middleInitial !== "") {
     fullName += " " + middleInitial + ".";
-  }
+  };
   if (lastName !== "") {
     fullName += " " + lastName;
-  }
-
+  };
   if (fullName === "") {
     fullName = "My dear Guest";
-  }
+  };
 
   document.getElementById("greeting").textContent = `Welcome to McRoffis Designs, ${fullName}!`;
   document.getElementById("name-entry").style.display = "none";
@@ -30,20 +37,22 @@ const fullName = addEventListener("submit", function (event) {
 
   for (let i = 1; i <= countValue; i++) {
     let output = `${i}. `;
-    if (i % 3 === 0) {
+    if (checkDivision(i, 3)) {
       output += "McRoffizz ";
-    }
-    if (i % 5 === 0) {
+    };
+    if (checkDivision(i, 5)) {
       output += "McRoffbuzz ";
-    } 
-    if (i % 7 === 0) {
+    };
+    if (checkDivision(i, 7)) {
       output += "McRoffbang ";
-    }
+    };
     output = output.trim(); // Remove any trailing space
     document.getElementById("output").innerHTML += `<p>${output}</p>`;
-  }
+  };
 
-  const reset = addEventListener("click", function () {
+  const reset = document.getElementById("reset");
+
+  reset.addEventListener("click", function () {
     location.reload();
   });
 });
