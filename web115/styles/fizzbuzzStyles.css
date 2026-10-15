@@ -83,16 +83,16 @@ label {
 input {
   display: inline-block;
   width: 70%;
-  padding: 0.5em 0 0.5em 0.25em;
+  padding: 0.5em 0;
   margin-bottom: 1em;
   border: 1px solid var(--neutral);
   border-radius: 5px;
   font-family: 'Raleway', Arial ,sans-serif;
+  text-indent: 0.5em;
 }
 
 input::placeholder {
   color:  var(--dark);
-  padding-left: 0.25em;
   opacity: 0.5;
   font-family: 'Raleway', Arial ,sans-serif;
 }
