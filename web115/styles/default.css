@@ -26,8 +26,40 @@
 }
 
 header {
+  width: 100%;
+  margin: 0 auto;
   padding: 20px 0;
   text-align: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1em;
+  align-items: flex-start;
+  justify-content: space-between;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.header-container a, .header-container picture {
+  max-height: 100%;
+  max-width: 10rem;
+}
+
+.header-container .wordmark {
+  height: 100%;
+  max-width: 100%;
+  padding-top: .15rem;
+}
+
+header hr {
+  border: 0;
+  height: 1.5px;
+  background-color: var(--brand);
+  background: linear-gradient(to right, transparent, var(--brand), transparent);
+  margin: 0;
 }
 
 nav ul {
@@ -103,6 +135,66 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+h6 {
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+p {
+  margin-bottom: .5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+figure {
+  max-width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+figure img {
+  width: auto;
+  height: 50vh;
+  border-radius: 3em;
+}
+
+figcaption {
+  margin: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+main ul {
+  list-style: disc;
+  padding-left: 4em;
+  margin-bottom: 1em;
+}
+
+ul ol {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+blockquote {
+  font-style: normal;
+  margin: 20px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(to bottom, transparent 5%, var(--brand), transparent 95%) 1;
 }
 
 strong {
