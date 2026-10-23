@@ -51,7 +51,7 @@ header {
 .header-container .wordmark {
   height: 100%;
   max-width: 100%;
-  padding-top: .15rem;
+  margin-top: .25rem;
 }
 
 header hr {
@@ -133,15 +133,17 @@ main {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5 {
   font-family: 'Playfair Display', 'Georgia', serif;
 }
 
 h2 {
+  font-family: 'Playfair Display', 'Georgia', serif;
   margin-bottom: 1em;
 }
 
 h6 {
+  font-family: 'Playfair Display', 'Georgia', serif;
   margin-bottom: 1em;
   font-size: 1.25em;
   text-align: center;
