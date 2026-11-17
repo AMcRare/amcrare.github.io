@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Introduction Form</title>
+  
+    <link rel="icon" type="image/svg" href="images/favicon.svg" />
+
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Validation -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- divs used for scripting -->
+    <div data-include="components/header.html"></div>
+
+    <main>
+      <h2>Introduction Form</h2>
+
+      <form>
+        <fieldset id="name-nickname">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" value="Angela" placeholder="Enter your first name." required>
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" value="McCrary-Roffis" placeholder="Enter your last name." required>
+
+          <label for="divider">Divider:</label>
+          <select id="divider" name="divider" required>
+            <option value="">Select a divider</option>
+            <option value="&#10051;" selected>&#10051;</option>
+            <option value="&#10052;">&#10052;</option>
+            <option value="&#10053;">&#10053;</option>
+          </select>
+
+          <label for="nickname">Nickname:</label>
+          <input type="text" id="nickname" name="nickname" value="Adventurous Musk Rat" placeholder="Enter your nickname." required>
+        </fieldset>
+        <fieldset id="image-entry">
+          <!-- Default preview image -->
+          <img id="preview" class="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
+          <label for="image">Image:</label>
+          <input type="file" id="image" name="image" accept="image/*" required>
+        </fieldset>
+        <fieldset id="bio-entry">
+          <label for="bio">About Me:</label>
+          <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself." required>Hi, My name is Angela McCrary-Roffis. I love food and books. I'm currently making my way through the Dungeon Crawler Carl series and my favorite food is probably Shepherd's Pie.</textarea>
+
+          <label for="personal-background">Personal Background:</label>
+          <textarea id="personal-background" name="personal-background" rows="4" cols="50" placeholder="Describe your personal background." required>I am 35-years-old and a mother of two young girls.</textarea>
+          
+          <label for="professional-background">Professional Background:</label>
+          <textarea id="professional-background" name="professional-background" rows="4" cols="50" placeholder="Describe your professional background." required>I currently work part-time, but have worked in many fields and positions.</textarea>
+
+          <label for="academic-background">Academic Background:</label>
+          <textarea id="academic-background" name="academic-background" rows="4" cols="50" placeholder="Describe your academic background." required>I hold a B.F.A in Film and Television from SCAD. Planning to graduate after Summer 2027 with my AAS in Information Technology - Application Development & Data Analysis</textarea>
+
+          <label for="primary-computer">Primary Work Computer (Type, OS, and Version):</label>
+          <textarea id="primary-computer" name="primary-computer" rows="4" cols="50" placeholder="Describe your primary work computer." required>I use a Lenovo ThinkPad T14, Windows 11 Pro</textarea>
+
+          <label for="primary-location">Primary Work Location:</label>
+          <textarea id="primary-location" name="primary-location" rows="4" cols="50" placeholder="Describe your primary work location." required>Home office.</textarea>
+
+          <label for="alternate-computer">Alternate Computer & Location:</label>
+          <textarea id="alternate-computer" name="alternate-computer" rows="4" cols="50" placeholder="Describe your alternate computer and location." required>I also have a MacBook if necessary. If I need a different location, CPCC has a library and the Charlotte-Mecklenburg libraries are also amazing.</textarea>
+        </fieldset>
+        <fieldset id="courses-entry">
+          <legend>Courses I'm Taking & Why:</legend>
+          <input type="text" id="itemInput" value="WEB140 - Web Development Tools" placeholder="Course Name" required>
+          <input type="text" id="reasonInput" value="Required for program" placeholder="Reason" required>
+          <button type="button" onclick="addItem()">Add (+)</button>
+          <ol id="itemList"></ol>
+
+          <!-- Hidden input to store all items for form submission -->
+          <input type="hidden" name="items" id="itemsHidden">
+        </fieldset>
+        <fieldset id="quote-entry">
+          <label for="quote">Favorite Quote:</label>
+          <textarea id="quote" name="quote" rows="4" cols="50" required>"Keep moving forward."</textarea>
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" value="Walt Disney" required>
+        </fieldset>
+        <fieldset id="buttons">
+          <h3>Submit or Reset</h3>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+      </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <!-- Load header and footer using JavaScript -->
+    <script src="scripts/includes.js"></script>
+
+    <!-- Scripts for form functionality -->
+    <script src="scripts/introduction.js"></script>
+
+    <!-- Validation -->
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
+  </body>
+</html>
