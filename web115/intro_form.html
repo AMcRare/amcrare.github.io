@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg" href="images/favicon.svg" />
 
     <link rel="stylesheet" type="text/css" href="styles/default.css" />
+    <link rel="stylesheet" type="text/css" href="styles/formStyles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +39,9 @@
             <option value="&#10051;" selected>&#10051;</option>
             <option value="&#10052;">&#10052;</option>
             <option value="&#10053;">&#10053;</option>
+            <option value="&#10054;">&#10054;</option>
+            <option value="&#10055;">&#10055;</option>
+            <option value="&#10056;">&#10056;</option>
           </select>
 
           <label for="nickname">Nickname:</label>
@@ -48,6 +52,8 @@
           <img id="preview" class="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
           <label for="image">Image:</label>
           <input type="file" id="image" name="image" accept="image/*" required>
+          <label for="image-caption" >Image Caption:</label>
+          <input type="text" id="image-caption" name="image-caption" value="Professional Photo" placeholder="Enter image caption." required>
         </fieldset>
         <fieldset id="bio-entry">
           <label for="bio">About Me:</label>
@@ -62,7 +68,7 @@
           <label for="academic-background">Academic Background:</label>
           <textarea id="academic-background" name="academic-background" rows="4" cols="50" placeholder="Describe your academic background." required>I hold a B.F.A in Film and Television from SCAD. Planning to graduate after Summer 2027 with my AAS in Information Technology - Application Development & Data Analysis</textarea>
 
-          <label for="primary-computer">Primary Work Computer (Type, OS, and Version):</label>
+          <label for="primary-computer">Primary Work Computer<br>(Type, OS, and Version):</label>
           <textarea id="primary-computer" name="primary-computer" rows="4" cols="50" placeholder="Describe your primary work computer." required>I use a Lenovo ThinkPad T14, Windows 11 Pro</textarea>
 
           <label for="primary-location">Primary Work Location:</label>
@@ -73,8 +79,12 @@
         </fieldset>
         <fieldset id="courses-entry">
           <legend>Courses I'm Taking & Why:</legend>
-          <input type="text" id="itemInput" value="WEB140 - Web Development Tools" placeholder="Course Name" required>
-          <input type="text" id="reasonInput" value="Required for program" placeholder="Reason" required>
+          <div id="course-inputs">
+            <label for="itemInput">Course Name:</label>
+            <label for="reasonInput">Reason:</label>
+            <input type="text" id="itemInput" value="WEB140 - Web Development Tools" placeholder="Course Name" required>
+            <input type="text" id="reasonInput" value="Required for program" placeholder="Reason" required>
+          </div>
           <button type="button" onclick="addItem()">Add (+)</button>
           <ol id="itemList"></ol>
 
@@ -90,8 +100,11 @@
         </fieldset>
         <fieldset id="buttons">
           <h3>Submit or Reset</h3>
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
+          <div class="button-container">
+            <button type="submit" id="submitButton">Submit</button>
+            <button type="reset" id="resetButton">Reset</button>
+          </div>
+        </fieldset>
       </form>
     </main>
 
