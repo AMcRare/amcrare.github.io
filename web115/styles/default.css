@@ -226,6 +226,9 @@ footer img {
     color: var(--light);
     background-color: var(--dark);
   }
+  a {
+    color: var(--brand);
+  }
   .dropdown {
     background-color: var(--dark);
   }

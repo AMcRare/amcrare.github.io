@@ -24,18 +24,18 @@ table {
   border: 0;
 }
 
-thead {
+thead, tfoot {
   font-size: 1rem;
   font-family: "Playfair Display", Georgia, serif;
 }
 
-thead th {
+thead th, tfoot td {
   background-color: var(--dark);
   color: var(--light);
   text-align: left;
 }
 
-thead th:first-child {
+thead th:first-child, tfoot td:first-child {
   width: 70%;
   padding-left: 0.5rem;
 }
@@ -128,15 +128,14 @@ tbody tr {
   border-bottom: 1px solid var(--neutral);
 }
 
-tbody tr th {
+tbody {
   height: 0;
   background-color: var(--brand);
   border-bottom: 3px double var(--dark);
-  margin: .5rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  thead th {
+  thead th, tfoot td {
     background-color: var(--accent);
     color: var(--light);
   }
@@ -152,7 +151,7 @@ tbody tr th {
     background-color: var(--accent);
   }
 
-  tbody tr th {
+  tbody {
     border-bottom: 3px double var(--light);
   }
 }
