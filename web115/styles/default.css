@@ -116,10 +116,18 @@ nav a {
   color: var(--light);
 }
 
-.secondary-nav ul{
-  font-size: 0.75em !important;
+.secondary-nav {
   gap: 3px 20px;
   padding: 5px 0;
+}
+
+.secondary-nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+.secondary-nav ul li a{
+  font-size: 0.875em;
 }
 
 body {

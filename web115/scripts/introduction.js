@@ -24,6 +24,8 @@ const authorInput = document.getElementById('author');
 const submitButton = document.getElementById('submitButton');
 const resetButton = document.getElementById('resetButton');
 const output = document.getElementById('formOutput');
+const tryAgain = document.getElementById('tryAgain');
+const resetAfterButton = document.getElementById('resetAfterButton');
 let items = [];
 
 function verifyNickname() {
@@ -176,10 +178,21 @@ form.addEventListener('submit', function(event) {
       </blockquote>
   `;
   output.style.display = 'block';
+  tryAgain.style.display = 'block';
 });
 
 resetButton.addEventListener('click', function() {
   items = [];
   itemList.innerHTML = '';
   document.getElementById('preview').src = "./images/angela-headshot-square.jpg";
+});
+
+resetAfterButton.addEventListener('click', function() {
+  form.reset();
+  items = [];
+  itemList.innerHTML = '';
+  document.getElementById('preview').src = "./images/angela-headshot-square.jpg";
+  output.style.display = 'none';
+  tryAgain.style.display = 'none';
+  form.style.display = 'block';
 });

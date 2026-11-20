@@ -145,7 +145,7 @@ button.remove-btn:hover {
   background-color: #cc0000;
 }
 
-#formOutput {
+#formOutput, #tryAgain {
   display: none;
 }
 
