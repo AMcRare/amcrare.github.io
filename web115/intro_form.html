@@ -27,6 +27,7 @@
 
       <form id="intro-form">
         <fieldset id="name-nickname">
+          <legend class="sr-only">Identity Information</legend>
           <label for="first-name">First Name:</label>
           <input type="text" id="first-name" name="first-name" value="Angela" placeholder="Enter your first name." required>
 
@@ -52,6 +53,7 @@
           <input type="text" id="nickname-animal" name="nickname-animal" value="Musk Rat" placeholder="Enter your nickname animal." required>
         </fieldset>
         <fieldset id="image-entry">
+          <legend class="sr-only">Image Information</legend>
           <!-- Default preview image -->
           <img id="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
           <label for="image">Image:</label>
@@ -62,6 +64,7 @@
           <input type="text" id="image-caption" name="image-caption" value="Professional Photo" placeholder="Enter image caption." required>
         </fieldset>
         <fieldset id="bio-entry">
+          <legend class="sr-only">Biography Information</legend>
           <label for="bio">About Me:</label>
           <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself." required>Hi, My name is Angela McCrary-Roffis. I love food and books. I'm currently making my way through the Dungeon Crawler Carl series and my favorite food is probably Shepherd's Pie.</textarea>
 
@@ -100,6 +103,7 @@
           <input type="hidden" name="items" id="itemsHidden">
         </fieldset>
         <fieldset id="quote-entry">
+          <legend class="sr-only">Favorite Quote</legend>
           <label for="quote">Favorite Quote:</label>
           <textarea id="quote" name="quote" rows="4" cols="50" required>"Keep moving forward."</textarea>
 
@@ -107,6 +111,7 @@
           <input type="text" id="author" name="author" value="Walt Disney" required>
         </fieldset>
         <fieldset id="buttons">
+          <legend class="sr-only">Submit or Reset</legend>
           <h3>Submit or Reset</h3>
           <div class="button-container">
             <button type="submit" id="submitButton">Submit</button>
