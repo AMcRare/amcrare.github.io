@@ -116,6 +116,11 @@ nav a {
   color: var(--light);
 }
 
+.secondary-nav ul{
+  font-size: 0.75em !important;
+  gap: 3px 20px;
+  padding: 5px 0;
+}
 
 body {
   width: 90%;
@@ -207,6 +212,13 @@ input:focus, button:focus, a:focus {
   outline: var(--accent) auto 1px;
   border-color:  var(--brand);
   box-shadow: 0 0 5px var(--brand);
+}
+
+.generate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em auto;
 }
 
 footer {

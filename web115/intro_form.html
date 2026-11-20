@@ -25,7 +25,7 @@
     <main>
       <h2>Introduction Form</h2>
 
-      <form>
+      <form id="intro-form">
         <fieldset id="name-nickname">
           <label for="first-name">First Name:</label>
           <input type="text" id="first-name" name="first-name" value="Angela" placeholder="Enter your first name." required>
@@ -42,16 +42,22 @@
             <option value="&#10054;">&#10054;</option>
             <option value="&#10055;">&#10055;</option>
             <option value="&#10056;">&#10056;</option>
+            <option value="&#10057;">&#10057;</option>
+            <option value="&#10058;">&#10058;</option>
           </select>
 
-          <label for="nickname">Nickname:</label>
-          <input type="text" id="nickname" name="nickname" value="Adventurous Musk Rat" placeholder="Enter your nickname." required>
+          <label for="nickname-adj">Nickname Adjective:</label>
+          <input type="text" id="nickname-adj" name="nickname-adj" value="Adventurous" placeholder="Enter your nickname adjective." required>
+          <label for="nickname-animal">Nickname Animal:</label>
+          <input type="text" id="nickname-animal" name="nickname-animal" value="Musk Rat" placeholder="Enter your nickname animal." required>
         </fieldset>
         <fieldset id="image-entry">
           <!-- Default preview image -->
-          <img id="preview" class="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
+          <img id="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
           <label for="image">Image:</label>
-          <input type="file" id="image" name="image" accept="image/*" required>
+          <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
+          <label for="image-alt">Image Alt Text:</label>
+          <input type="text" id="image-alt" name="image-alt" value="Angela McCrary-Roffis" placeholder="Enter image alt text." required>
           <label for="image-caption" >Image Caption:</label>
           <input type="text" id="image-caption" name="image-caption" value="Professional Photo" placeholder="Enter image caption." required>
         </fieldset>
@@ -80,10 +86,12 @@
         <fieldset id="courses-entry">
           <legend>Courses I'm Taking & Why:</legend>
           <div id="course-inputs">
+            <label for="itemCode">Course Code:</label>
             <label for="itemInput">Course Name:</label>
             <label for="reasonInput">Reason:</label>
-            <input type="text" id="itemInput" value="WEB140 - Web Development Tools" placeholder="Course Name" required>
-            <input type="text" id="reasonInput" value="Required for program" placeholder="Reason" required>
+            <input type="text" id="itemCode" value="WEB140" placeholder="Course Code" >
+            <input type="text" id="itemInput" value="Web Development Tools" placeholder="Course Name" >
+            <input type="text" id="reasonInput" value="Required for program" placeholder="Reason" >
           </div>
           <button type="button" onclick="addItem()">Add (+)</button>
           <ol id="itemList"></ol>
@@ -106,7 +114,14 @@
           </div>
         </fieldset>
       </form>
+      <div id="formOutput"></div>
     </main>
+
+    <div class="generate-buttons">
+      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate HTML</button>
+      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate JSON</button>
+      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate XML</button>
+    </div>
 
     <div data-include="components/footer.html"></div>
 

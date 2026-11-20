@@ -162,12 +162,12 @@ button:active {
   }
 
   button {
-    background-color: var(--brand);
+    background-color: var(--accent);
     color: var(--light);
   }
 
   button:hover, button:active {
-    background-color: var(--accent);
+    background-color: var(--brand);
     color: var(--light);
   }
 
