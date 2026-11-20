@@ -21,7 +21,7 @@ fieldset {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-#buttons h3 {
+.fieldset-heading {
   width: 100%;
   text-align: center;
 }
