@@ -1,0 +1,109 @@
+    <main>
+      <h2>Introduction Form</h2>
+
+      <form id="intro-form">
+        <fieldset id="name-nickname">
+          <legend class="sr-only">Identity Information</legend>
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" value="Angela" placeholder="Enter your first name." required>
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" value="McCrary-Roffis" placeholder="Enter your last name." required>
+
+          <label for="divider">Divider:</label>
+          <select id="divider" name="divider" required>
+            <option value="">Select a divider</option>
+            <option value="&#10051;" selected>&#10051;</option>
+            <option value="&#10052;">&#10052;</option>
+            <option value="&#10053;">&#10053;</option>
+            <option value="&#10054;">&#10054;</option>
+            <option value="&#10055;">&#10055;</option>
+            <option value="&#10056;">&#10056;</option>
+            <option value="&#10057;">&#10057;</option>
+            <option value="&#10058;">&#10058;</option>
+          </select>
+
+          <label for="nickname-adj">Nickname Adjective:</label>
+          <input type="text" id="nickname-adj" name="nickname-adj" value="Adventurous" placeholder="Enter your nickname adjective." required>
+          <label for="nickname-animal">Nickname Animal:</label>
+          <input type="text" id="nickname-animal" name="nickname-animal" value="Musk Rat" placeholder="Enter your nickname animal." required>
+        </fieldset>
+        <fieldset id="image-entry">
+          <legend class="sr-only">Image Information</legend>
+          <!-- Default preview image -->
+          <img id="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
+          <label for="image">Image:</label>
+          <input type="file" id="image" name="image" accept="image/*">
+          <label for="image-alt">Image Alt Text:</label>
+          <input type="text" id="image-alt" name="image-alt" value="Angela McCrary-Roffis" placeholder="Enter image alt text." required>
+          <label for="image-caption" >Image Caption:</label>
+          <input type="text" id="image-caption" name="image-caption" value="Professional Photo" placeholder="Enter image caption." required>
+        </fieldset>
+        <fieldset id="bio-entry">
+          <legend class="sr-only">Biography Information</legend>
+          <label for="bio">About Me:</label>
+          <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself." required>Hi, My name is Angela McCrary-Roffis. I love food and books. I'm currently making my way through the Dungeon Crawler Carl series and my favorite food is probably Shepherd's Pie.</textarea>
+
+          <label for="personal-background">Personal Background:</label>
+          <textarea id="personal-background" name="personal-background" rows="4" cols="50" placeholder="Describe your personal background." required>I am 35-years-old and a mother of two young girls.</textarea>
+          
+          <label for="professional-background">Professional Background:</label>
+          <textarea id="professional-background" name="professional-background" rows="4" cols="50" placeholder="Describe your professional background." required>I currently work part-time, but have worked in many fields and positions.</textarea>
+
+          <label for="academic-background">Academic Background:</label>
+          <textarea id="academic-background" name="academic-background" rows="4" cols="50" placeholder="Describe your academic background." required>I hold a B.F.A in Film and Television from SCAD. Planning to graduate after Summer 2027 with my AAS in Information Technology - Application Development & Data Analysis</textarea>
+
+          <label for="primary-computer">Primary Work Computer<br>(Type, OS, and Version):</label>
+          <textarea id="primary-computer" name="primary-computer" rows="4" cols="50" placeholder="Describe your primary work computer." required>I use a Lenovo ThinkPad T14, Windows 11 Pro</textarea>
+
+          <label for="primary-location">Primary Work Location:</label>
+          <textarea id="primary-location" name="primary-location" rows="4" cols="50" placeholder="Describe your primary work location." required>Home office.</textarea>
+
+          <label for="alternate-computer">Alternate Computer & Location:</label>
+          <textarea id="alternate-computer" name="alternate-computer" rows="4" cols="50" placeholder="Describe your alternate computer and location." required>I also have a MacBook if necessary. If I need a different location, CPCC has a library and the Charlotte-Mecklenburg libraries are also amazing.</textarea>
+        </fieldset>
+        <fieldset id="courses-entry">
+          <legend>Courses I'm Taking & Why:</legend>
+          <div id="course-inputs">
+            <label for="itemCode">Course Code:</label>
+            <label for="itemInput">Course Name:</label>
+            <label for="reasonInput">Reason:</label>
+            <input type="text" id="itemCode" value="WEB140" placeholder="Course Code" >
+            <input type="text" id="itemInput" value="Web Development Tools" placeholder="Course Name" >
+            <input type="text" id="reasonInput" value="Required for program" placeholder="Reason" >
+          </div>
+          <button type="button" onclick="addItem()">Add (+)</button>
+          <ol id="itemList"></ol>
+
+          <!-- Hidden input to store all items for form submission -->
+          <input type="hidden" name="items" id="itemsHidden">
+        </fieldset>
+        <fieldset id="quote-entry">
+          <legend class="sr-only">Favorite Quote</legend>
+          <label for="quote">Favorite Quote:</label>
+          <textarea id="quote" name="quote" rows="4" cols="50" required>"Keep moving forward."</textarea>
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" value="Walt Disney" required>
+        </fieldset>
+        <fieldset id="buttons">
+          <legend class="sr-only">Submit or Reset</legend>
+          <h3 class="fieldset-heading">Submit or Reset</h3>
+          <div class="button-container">
+            <button type="submit" id="submitButton">Submit</button>
+            <button type="reset" id="resetButton">Reset</button>
+          </div>
+        </fieldset>
+      </form>
+      <div id="formOutput"></div>
+      <div id="tryAgain"><button type="reset" id="resetAfterButton">Reset</button></div>
+
+    <div class="generate-buttons">
+      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate HTML</button>
+      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate JSON</button>
+      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate XML</button>
+    </div>
+    
+    </main>
+
+
