@@ -57,7 +57,7 @@
           <!-- Default preview image -->
           <img id="preview" src="./images/angela-headshot-square.jpg" alt="Default Preview" width="150" height="150">
           <label for="image">Image:</label>
-          <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
+          <input type="file" id="image" name="image" accept="image/*">
           <label for="image-alt">Image Alt Text:</label>
           <input type="text" id="image-alt" name="image-alt" value="Angela McCrary-Roffis" placeholder="Enter image alt text." required>
           <label for="image-caption" >Image Caption:</label>
@@ -121,13 +121,13 @@
       </form>
       <div id="formOutput"></div>
       <div id="tryAgain"><button type="reset" id="resetAfterButton">Reset</button></div>
-    </main>
 
-    <div class="generate-buttons">
-      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate HTML</button>
-      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate JSON</button>
-      <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate XML</button>
-    </div>
+      <div class="generate-buttons">
+        <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate HTML</button>
+        <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate JSON</button>
+        <button onclick = 'alert("This button is not functional, but in the future would generate the code or data indicated.")'>Generate XML</button>
+      </div>
+    </main>
 
     <div data-include="components/footer.html"></div>
 

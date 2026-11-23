@@ -80,9 +80,12 @@ document.getElementById('image').addEventListener('change', function(event) {
 function loadImage(e) {
   const [imageInputFromEvent] = Object.values(e.target).filter((el) => el.id === 'image');
   const file = imageInputFromEvent?.files[0];
+  // const file = imageInputFromEvent && imageInputFromEvent.files[0];
+  // console.log("imageInputFromEvent", imageInputFromEvent);
+  // console.log("File", file);
   if (file) {
     const url = URL.createObjectURL(file);
-    console.log("url", url);
+    // console.log("URL", url);
     imageInput.src = url;
   } else {
     // Reset to default if no file selected

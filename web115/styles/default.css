@@ -229,6 +229,11 @@ input:focus, button:focus, a:focus {
   margin: 1em auto;
 }
 
+.generate-buttons button {
+  background-color: #555555;
+  color: var(--neutral);
+}
+
 footer {
   width: 90%;
   text-align: center;
