@@ -22,13 +22,13 @@
     <header>
       <div class="header-container">
         <h1>Angela McCrary-Roffis's Adventurous Musk Rat <span class="flower">&#10051;</span> WEB115</h1>
-        <a href="" aria-disabled="true" id="logo-link" data-destination="components/index.html">
+        <div role="button" data-destination="components/index.html">
           <picture>
             <source srcset="images/LogoDefault.svg" media="(prefers-color-scheme: light)" class="wordmark">
             <source srcset="images/LogoDarkMode.svg" media="(prefers-color-scheme: dark)" class="wordmark">
             <img src="images/LogoDefault.svg" alt="McRoffis Designs Logo" class="wordmark">
           </picture>
-        </a>
+        </div>
       </div>
 
       <hr>
@@ -59,8 +59,8 @@
 
       <nav class="secondary-nav">
         <ul>
-          <li><div role="button" id="onepagesiteoriginal-link" data-destination="components/onepagesiteoriginal.html">One Page Site Original</div></li>
-          <li><div role="button" id="onepagesitecopy-link" data-destination="components/onepagesitecopy.html">One Page Site Copy</div></li>
+          <li><a href="one_page_site_original/index.html" target="_blank">One Page Site Original</a></li>
+          <li><a href="one_page_site_copy/index.html" target="_blank">One Page Site Copy</a></li>
         </ul>
       </nav>
 
@@ -70,27 +70,13 @@
     <!-- classes, ids, and divs used for styling and scripting -->
     <div id="main-content"></div>
 
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="https://amcrare.github.io/" target="_blank">GitHub.io</a></li>
-          <li><a href="https://github.com/amcrare" target="_blank">GitHub</a></li>
-          <li><a href="https://www.freecodecamp.org/amcrare" target="_blank">freeCodeCamp</a></li>
-          <li><a href="https://www.codecademy.com/profiles/McRoffis" target="_blank">Codecademy</a></li>
-          <li><a href="https://www.linkedin.com/in/angela-mccrary-roffis/" target="_blank">LinkedIn</a></li>
-        </ul>
-      </nav>
-      <div>
-        <p><em>Page designed by <a href="https://amcrare.github.io/web115/mcroffisdesigns.com/index.html" target="_blank" id="mcroffisdesigns-link">McRoffis Designs</a></em></p>
-        <img src="images/IconDefault.svg" alt="McRoffis Designs Icon">
-      </div>
-    </footer>
+    <div data-include="components/footer.html"></div>
 
     <!-- Load content using JavaScript -->
     <script src="scripts/includes.js"></script>
     <script src="scripts/index2.js"></script>
 
     <!-- Validation -->
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
   </body>
 </html>
