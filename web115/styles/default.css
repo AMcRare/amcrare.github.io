@@ -71,12 +71,17 @@ nav ul {
   padding: 10px 0;
 }
 
+nav ul li {
+  margin: 0;
+}
+
 nav a, div[role="button"] {
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
   color: var(--accent);
+  cursor: pointer;
 }
 
 .dropdown {
@@ -99,6 +104,7 @@ nav a, div[role="button"] {
   border: 4px double var(--neutral);
   z-index: 1;
   gap: .5em;
+  cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {
@@ -109,7 +115,7 @@ nav a, div[role="button"] {
   width: 100%;
 }
 
-.dropdown-content a:hover, .dropdown-content a:focus {
+.dropdown-content a:hover, .dropdown-content a:focus, .dropdown-content div:hover, .dropdown-content div:focus {
   width: 100%;
   margin: 0 auto;
   background-color: var(--brand);
@@ -126,7 +132,7 @@ nav a, div[role="button"] {
   margin: 0;
 }
 
-.secondary-nav ul li a, .secondary-nav ul li div[role="button"] {
+.secondary-nav ul li a{
   font-size: 0.875em;
 }
 
@@ -166,10 +172,15 @@ p {
   margin-bottom: .5em;
 }
 
-a {
+a, span[role="button"] {
   text-decoration: none;
   color: var(--accent);
   font-weight: 600;
+}
+
+span[role="button"] {
+  cursor: pointer;
+  tab-index: 0;
 }
 
 figure {
@@ -251,7 +262,7 @@ footer img {
     color: var(--light);
     background-color: var(--dark);
   }
-  a, nav a, .dropdown, .dropdown-content a {
+  a, nav a, .dropdown, .dropdown-content a, div[role="button"], span[role="button"] {
     color: var(--brand);
   }
   .dropdown {
