@@ -6,15 +6,15 @@ function checkDivision(divisor1, divisor2) {
   }
 }
 
-const fullName = addEventListener("submit", function (event) {
+const fizzbuzz3 = addEventListener("submit", function (event) {
   event.preventDefault();
   const firstNameInput = document.getElementById("first-name");
-  const middleInitialInput = document.getElementById("middle-initial");
+  const middleInitialInput = document.getElementById("middle-name");
   const lastNameInput = document.getElementById("last-name");
   const firstName = firstNameInput.value.trim();
   const middleInitial = middleInitialInput.value.trim();
   const lastName = lastNameInput.value.trim();
-  var fullName = "";
+  let fullName = "";
   if (firstName !== "") {
     fullName += firstName;
   }

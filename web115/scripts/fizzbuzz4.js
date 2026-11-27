@@ -6,15 +6,34 @@ function checkDivision(divisor1, divisor2) {
   }
 }
 
-const fullName = addEventListener("submit", function (event) {
+function checkCountRange(start, end) {
+  if (start < 1 || end > 1000 || start > end) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+const fizzbuzz4 = addEventListener("submit", function (event) {
   event.preventDefault();
+  const countStartInput = document.getElementById("count-start");
+  const countStartValue = parseInt(countStartInput.value.trim());
+
+  const countInput = document.getElementById("count");
+  const countValue = parseInt(countInput.value.trim());
+
+  if (!checkCountRange(countStartValue, countValue)) {
+    alert("Please enter a valid count range (1-1000).");
+    return;
+  }
+
   const firstNameInput = document.getElementById("first-name");
-  const middleInitialInput = document.getElementById("middle-initial");
+  const middleInitialInput = document.getElementById("middle-name");
   const lastNameInput = document.getElementById("last-name");
   const firstName = firstNameInput.value.trim();
   const middleInitial = middleInitialInput.value.trim();
   const lastName = lastNameInput.value.trim();
-  var fullName = "";
+  let fullName = "";
   if (firstName !== "") {
     fullName += firstName;
   }
@@ -39,6 +58,9 @@ const fullName = addEventListener("submit", function (event) {
 
   const count = this.addEventListener("submit", function (event) {
     event.preventDefault();
+    const countStartInput = document.getElementById("count-start");
+    const countStartValue = parseInt(countStartInput.value.trim());
+
     const countInput = document.getElementById("count");
     const countValue = parseInt(countInput.value.trim());
 
@@ -66,9 +88,9 @@ const fullName = addEventListener("submit", function (event) {
     document.getElementById("number-entry").style.display = "none";
     document.getElementById("results").style.display = "block";
 
-    document.getElementById("results-message").textContent = `Counting to ${countValue}...`;
+    document.getElementById("results-message").textContent = `Counting from ${countStartValue} to ${countValue}...`;
 
-    for (let i = 1; i <= countValue; i++) {
+    for (let i = countStartValue; i <= countValue; i++) {
       let output = `${i}. `;
       if (checkDivision(i, divisor1Value)) {
         output += `${word1Value} `;

@@ -46,7 +46,8 @@ h3 {
   text-align: center;
 }
 
-h4 {
+h4, #greeting {
+  width: 100%;
   text-align: left;
   margin: 1em 0 0.5em 0;
   color: var(--accent);
@@ -58,6 +59,17 @@ fieldset {
   border-radius: 10px;
   padding: 2em 1em;
   margin-bottom: 1em;
+}
+
+#name-fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#name-fieldset label, #name-fieldset input {
+  text-align: left;
+  margin-bottom: 0.5em;
+  width: 80%;
 }
 
 .columns {
