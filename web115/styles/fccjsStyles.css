@@ -124,6 +124,11 @@ li.review::after {
   vertical-align: top;
 }
 
+.certProject {
+  font-weight: 600;
+  padding-top: 0.25rem;
+}
+
 tbody tr {
   border-bottom: 1px solid var(--neutral);
 }
