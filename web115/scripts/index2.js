@@ -82,7 +82,7 @@ const updateSecondaryStylesheet = (destination) => {
       brandStylesheet.disabled = true;
       fccjsStylesheet.disabled = true;
       formStylesheet.disabled = true;
-      fizzbuzzStylesheet.disabled = true;;
+      fizzbuzzStylesheet.disabled = true;
   }
 };
 
