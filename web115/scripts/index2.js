@@ -64,7 +64,7 @@ const updateSecondaryStylesheet = (destination) => {
       secondaryStylesheet.setAttribute('href', 'styles/fccjsStyles.css');
       break;
     default:
-      secondaryStylesheet.setAttribute('href', '');
+      secondaryStylesheet.removeAttribute('href');
   }
 };
 
@@ -150,7 +150,7 @@ window.addEventListener('DOMContentLoaded', async() => {
     window.location.hash = '#home';
     const newHtml = await response.text();
     mainContent.innerHTML = newHtml;
-    secondaryStylesheet.setAttribute('href', '');
+    secondaryStylesheet.removeAttribute('href');
   } else {
     const destination = `components/${hash.substring(1)}.html`;
     handleHTMLUpdate(destination);
