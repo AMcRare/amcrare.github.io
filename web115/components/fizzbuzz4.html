@@ -9,15 +9,15 @@
     <h3>McRoffis Designs Fizz Buzz</h3>
   </div>
   <section>
-    <h4 id="greeting">Welcome to McRoffis Designs!</h4>
+    <h3 id="greeting">Welcome to McRoffis Designs!</h3>
     <form id="name-entry">
-      <fieldset>
+      <fieldset id="name-fieldset">
         <legend class="sr-only">Enter your name:</legend>
         <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" placeholder="John"/>
-        <label for="middle-initial">Middle Initial:</label>
-        <input type="text" id="middle-initial" name="middle-initial" maxlength="1" placeholder="J"/>
+        <label for="middle-name">Middle Initial:</label>
         <label for="last-name">Last Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="John"/>
+        <input type="text" id="middle-name" name="middle-name" maxlength="1" placeholder="J"/>
         <input type="text" id="last-name" name="last-name" placeholder="Doe"/>
       </fieldset>
       <button type="submit">Continue</button>
@@ -28,11 +28,11 @@
     <form>
       <fieldset class="columns">
         <legend class="sr-only">Enter your numbers:</legend>
+        <label for="count-start" class="envelope">Count Start:
+          <input type="number" id="count-start" name="count-start" placeholder="1" min="1" max="1000" value="1"/>
+        </label>
         <label for="count" class="envelope">Count to:
           <input type="number" id="count" name="count" placeholder="1" min="1" max="1000" value="125"/>
-        </label>
-        <label for="word0" class="envelope">Word for numbers not divisible by any divisor:
-          <input type="text" id="word0" name="word0" placeholder="" value=""/>
         </label>
         <label for="divisor1" class="envelope">Divisor 1:
           <input type="number" id="divisor1" name="divisor1" placeholder="3" min="1" max="1000" required/>
@@ -52,6 +52,9 @@
         <label for="word3" class="envelope">Word 3:
           <input type="text" id="word3" name="word3" placeholder="McRoffbang" value="McRoffbang"/>
         </label>
+        <label for="word0" class="envelope">Word for numbers not divisible by any divisor:
+          <input type="text" id="word0" name="word0" placeholder="" value=""/>
+        </label>
       </fieldset>
       <button type="submit">Count</button>
     </form>
@@ -62,5 +65,3 @@
     <button id="reset" type="button">Reset</button>
   </section>
 </main>
-
-<script src="scripts/fizzbuzz4.js"></script>

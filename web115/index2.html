@@ -19,6 +19,7 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   </head>
   <body>
+<!-- When I try to use an included header, the js has trouble accessing the links, so I just put it here directly -->
     <header>
       <div class="header-container">
         <h1>Angela McCrary-Roffis's Adventurous Musk Rat <span class="flower">&#10051;</span> WEB115</h1>
@@ -35,23 +36,29 @@
 
       <nav>
         <ul>
-          <li><div role="button" id="home-link" data-destination="components/index.html">Home</div></li>
-          <li><div role="button" id="introduction-link" data-destination="components/introduction.html">Introduction</div></li>
-          <li><div role="button" id="about-link" data-destination="components/about.html">About</div></li>
-          <li><div role="button" id="contract-link" data-destination="components/contract.html">Contract</div></li>
-          <li><div role="button" id="brandboard-link" data-destination="components/brandboard.html">Brand Board</div></li>
+          <li class="dropdown">
+            <span class="flower">&#10051;</span> Home
+            <ul class="dropdown-content">
+              <li><a href="index.html">Home</a></li>
+              <li><div role="button" id="home" data-destination="components/index.html">Home (2)</div></li>
+            </ul>      
+          </li>
+          <li><div role="button" id="introduction" data-destination="components/introduction.html">Introduction</div></li>
+          <li><div role="button" id="about" data-destination="components/about.html">About</div></li>
+          <li><div role="button" id="contract" data-destination="components/contract.html">Contract</div></li>
+          <li><div role="button" id="brandboard" data-destination="components/brandboard.html">Brand Board</div></li>
           <li class="dropdown">
             <span class="flower">&#10051;</span> Fizz Buzz
             <ul class="dropdown-content">
-              <li><div role="button" data-destination="components/fizzbuzz0.html" id="fizzbuzz0-link">Fizz Buzz 0</div></li>
-              <li><div role="button" data-destination="components/fizzbuzz1.html" id="fizzbuzz1-link">Fizz Buzz 1</div></li>
-              <li><div role="button" data-destination="components/fizzbuzz2.html" id="fizzbuzz2-link">Fizz Buzz 2</div></li>
-              <li><div role="button" data-destination="components/fizzbuzz3.html" id="fizzbuzz3-link">Fizz Buzz 3</div></li>
-              <li><div role="button" data-destination="components/fizzbuzz4.html" id="fizzbuzz4-link">Fizz Buzz 4</div></li>
+              <li><div role="button" data-destination="components/fizzbuzz0.html" id="fizzbuzz0">Fizz Buzz 0</div></li>
+              <li><div role="button" data-destination="components/fizzbuzz1.html" id="fizzbuzz1">Fizz Buzz 1</div></li>
+              <li><div role="button" data-destination="components/fizzbuzz2.html" id="fizzbuzz2">Fizz Buzz 2</div></li>
+              <li><div role="button" data-destination="components/fizzbuzz3.html" id="fizzbuzz3">Fizz Buzz 3</div></li>
+              <li><div role="button" data-destination="components/fizzbuzz4.html" id="fizzbuzz4">Fizz Buzz 4</div></li>
             </ul>      
           </li>
-          <li><div role="button" id="fccfsjs-link" data-destination="components/fccfsjs.html">FCC JS Outline</div></li>
-          <li><div role="button" id="introform-link" data-destination="components/intro_form.html">Introduction Form</div></li>
+          <li><div role="button" id="fccfsjs" data-destination="components/fccfsjs_outline.html">FCC JS Outline</div></li>
+          <li><div role="button" id="introform" data-destination="components/intro_form.html">Introduction Form</div></li>
         </ul>
       </nav>
 
@@ -72,9 +79,11 @@
 
     <div data-include="components/footer.html"></div>
 
+    <div id="dynamicScriptContainer"></div>
+
     <!-- Load content using JavaScript -->
     <script src="scripts/includes.js"></script>
-    <script src="scripts/index2.js"></script>
+    <script src="scripts/index2.js" id="index2-script" defer></script>
 
     <!-- Validation -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>

@@ -9,15 +9,15 @@
     <h3>McRoffis Designs Fizz Buzz</h3>
   </div>
   <section>
-    <h4 id="greeting">Welcome to McRoffis Designs!</h4>
+    <h3 id="greeting">Welcome to McRoffis Designs!</h3>
     <form id="name-entry">
-      <fieldset>
+      <fieldset id="name-fieldset">
         <legend class="sr-only">Enter your name:</legend>
         <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" placeholder="John"/>
-        <label for="middle-initial">Middle Initial:</label>
-        <input type="text" id="middle-initial" name="middle-initial" maxlength="1" placeholder="J"/>
+        <label for="middle-name">Middle Initial:</label>
         <label for="last-name">Last Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="John"/>
+        <input type="text" id="middle-name" name="middle-name" maxlength="1" placeholder="J"/>
         <input type="text" id="last-name" name="last-name" placeholder="Doe"/>
       </fieldset>
       <button type="submit">Continue</button>
@@ -29,5 +29,3 @@
     <button id="reset" type="button">Reset</button>
   </section>
 </main>
-
-<script src="scripts/fizzbuzz1.js"></script>

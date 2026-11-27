@@ -3,11 +3,18 @@ const secondaryStylesheet = document.getElementById('secondary-stylesheet');
 const mainContent = document.getElementById('main-content');
 
 window.addEventListener('DOMContentLoaded', async() => {
-  document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
-  const response = await fetch('components/index.html');
-  const newHtml = await response.text();
-  mainContent.innerHTML = newHtml;
-  secondaryStylesheet.setAttribute('href', '');
+  const hash = window.location.hash;
+  if (hash === '#home' || hash === '') {
+    document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
+    const response = await fetch('components/index.html');
+    window.location.hash = '#home';
+    const newHtml = await response.text();
+    mainContent.innerHTML = newHtml;
+    secondaryStylesheet.setAttribute('href', '');
+  } else {
+    const destination = `components/${hash.substring(1)}.html`;
+    handleHTMLUpdate(destination);
+  }
 });
 
 const updatePageTitle = (destination) => {
@@ -27,8 +34,8 @@ const updatePageTitle = (destination) => {
     case 'components/brandboard.html':
       document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Brand Board";
       break;
-    case 'components/fccfsjs.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; FCC JS Outline";
+    case 'components/fccfsjs_outline.html':
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; FCC Full Stack JavaScript Outline";
       break;
     case 'components/intro_form.html':
       document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Introduction Form";
@@ -68,7 +75,7 @@ const updateSecondaryStylesheet = (destination) => {
     case 'components/fizzbuzz4.html':
       secondaryStylesheet.setAttribute('href', 'styles/fizzbuzzStyles.css');
       break;
-    case 'components/fccfsjs.html':
+    case 'components/fccfsjs_outline.html':
       secondaryStylesheet.setAttribute('href', 'styles/fccjsStyles.css');
       break;
     default:
@@ -76,16 +83,75 @@ const updateSecondaryStylesheet = (destination) => {
   }
 };
 
+const updateSecondaryScript = (destination) => {
+  const oldScript = document.getElementById('dynamic-script');
+  const outputContent = document.getElementById("output");
+  if (oldScript) {
+    oldScript.remove();
+  }
+  if (outputContent) {
+    outputContent.innerHTML = '';
+  }
+  const newScript = document.createElement('script');
+  newScript.id = 'dynamic-script';
+  switch(destination) {
+    case 'components/fizzbuzz0.html':
+      newScript.src = 'scripts/fizzbuzz0.js';
+      break;
+    case 'components/fizzbuzz1.html':
+      newScript.src = 'scripts/fizzbuzz1.js';
+      break;
+    case 'components/fizzbuzz2.html':
+      newScript.src = 'scripts/fizzbuzz2.js';
+      break;
+    case 'components/fizzbuzz3.html':
+      newScript.src = 'scripts/fizzbuzz3.js';
+      break;
+    case 'components/fizzbuzz4.html':
+      newScript.src = 'scripts/fizzbuzz4.js';
+      break;
+    case 'components/intro_form.html':
+      newScript.src = 'scripts/introduction.js';
+      break;
+    default:
+      break;
+  }
+  const scriptContainer = document.getElementById('dynamicScriptContainer');
+  scriptContainer.appendChild(newScript);
+}
 const handleNavigation = async (event) => {
+  console.log("Navigation event fired", event.currentTarget);
   event.preventDefault();
   const destination = event.currentTarget.getAttribute('data-destination');
+  const hash = event.target.id;
+  console.log(`Navigating to ${destination} with hash ${hash}`);
+  await handleHTMLUpdate(destination);
+  window.location.hash = hash;
+}
+
+const handleHTMLUpdate = async (destination) => {
   const response = await fetch(destination);
   const newHtml = await response.text();
   mainContent.innerHTML = newHtml;
   updatePageTitle(destination);
   updateSecondaryStylesheet(destination);
+  if (
+    destination === 'components/fizzbuzz0.html' || 
+    destination === 'components/fizzbuzz1.html' || 
+    destination === 'components/fizzbuzz2.html' || 
+    destination === 'components/fizzbuzz3.html' ||
+    destination === 'components/fizzbuzz4.html' ||
+    destination === 'components/intro_form.html') {
+      updateSecondaryScript(destination);
+  }
 }
 
 document.querySelectorAll('nav [role="button"]').forEach(link => {
   link.addEventListener('click', handleNavigation);
+  console.log("fired1");
+});
+
+document.querySelectorAll('span [role="button"]').forEach(link => {
+  link.addEventListener('click', handleNavigation);
+  console.log("fired2");
 });
