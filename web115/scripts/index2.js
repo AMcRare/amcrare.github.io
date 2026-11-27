@@ -163,7 +163,7 @@ document.querySelectorAll('span [role="button"]').forEach((link) => {
 window.addEventListener('DOMContentLoaded', async() => {
   const hash = window.location.hash;
   if (hash === '#home' || hash === '') {
-    document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
+    document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Home";
     const response = await fetch('components/index.html');
     window.location.hash = '#home';
     const newHtml = await response.text();
