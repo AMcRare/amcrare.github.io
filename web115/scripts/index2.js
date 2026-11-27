@@ -1,4 +1,7 @@
-const secondaryStylesheet = document.getElementById('secondary-stylesheet');
+const brandStylesheet = document.getElementById('brand-stylesheet');
+const fccjsStylesheet = document.getElementById('fccjs-stylesheet');
+const formStylesheet = document.getElementById('form-stylesheet');
+const fizzbuzzStylesheet = document.getElementById('fizzbuzz-stylesheet');
 
 const mainContent = document.getElementById('main-content');
 
@@ -48,23 +51,38 @@ const updatePageTitle = (destination) => {
 const updateSecondaryStylesheet = (destination) => {
   switch (destination) {
     case 'components/brandboard.html':
-      secondaryStylesheet.setAttribute('href', 'styles/brandStyles.css');
+      brandStylesheet.disabled = false;
+      fccjsStylesheet.disabled = true;
+      formStylesheet.disabled = true;
+      fizzbuzzStylesheet.disabled = true;
       break;
     case 'components/intro_form.html':
-      secondaryStylesheet.setAttribute('href', 'styles/formStyles.css');
+      brandStylesheet.disabled = true;
+      fccjsStylesheet.disabled = true;
+      formStylesheet.disabled = false;
+      fizzbuzzStylesheet.disabled = true;
       break;
     case 'components/fizzbuzz0.html':
     case 'components/fizzbuzz1.html':
     case 'components/fizzbuzz2.html':
     case 'components/fizzbuzz3.html':
     case 'components/fizzbuzz4.html':
-      secondaryStylesheet.setAttribute('href', 'styles/fizzbuzzStyles.css');
+      brandStylesheet.disabled = true;
+      fccjsStylesheet.disabled = true;
+      formStylesheet.disabled = true;
+      fizzbuzzStylesheet.disabled = false;
       break;
     case 'components/fccfsjs_outline.html':
-      secondaryStylesheet.setAttribute('href', 'styles/fccjsStyles.css');
+      brandStylesheet.disabled = true;
+      fccjsStylesheet.disabled = false;
+      formStylesheet.disabled = true;
+      fizzbuzzStylesheet.disabled = true;
       break;
     default:
-      secondaryStylesheet.removeAttribute('href');
+      brandStylesheet.disabled = true;
+      fccjsStylesheet.disabled = true;
+      formStylesheet.disabled = true;
+      fizzbuzzStylesheet.disabled = true;;
   }
 };
 
@@ -150,7 +168,6 @@ window.addEventListener('DOMContentLoaded', async() => {
     window.location.hash = '#home';
     const newHtml = await response.text();
     mainContent.innerHTML = newHtml;
-    secondaryStylesheet.removeAttribute('href');
   } else {
     const destination = `components/${hash.substring(1)}.html`;
     handleHTMLUpdate(destination);
