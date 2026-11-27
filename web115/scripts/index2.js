@@ -8,43 +8,43 @@ const mainContent = document.getElementById('main-content');
 const updatePageTitle = (destination) => {
   switch (destination) {
     case 'components/index.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Home";
       break;
     case 'components/introduction.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Introduction";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Introduction";
       break;
     case 'components/about.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; About";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} About";
       break;
     case 'components/contract.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Contract";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Contract";
       break;
     case 'components/brandboard.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Brand Board";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Brand Board";
       break;
     case 'components/fccfsjs_outline.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; FCC Full Stack JavaScript Outline";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} FCC Full Stack JavaScript Outline";
       break;
     case 'components/intro_form.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Introduction Form";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Introduction Form";
       break;
     case 'components/fizzbuzz0.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 0";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Fizz Buzz 0";
       break;
     case 'components/fizzbuzz1.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 1";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Fizz Buzz 1";
       break;
     case 'components/fizzbuzz2.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 2";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Fizz Buzz 2";
       break;
     case 'components/fizzbuzz3.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 3";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Fizz Buzz 3";
       break;
     case 'components/fizzbuzz4.html':
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Fizz Buzz 4";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Fizz Buzz 4";
       break;
     default:
-      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
+      document.title = "Angela McCrary-Roffis's Adventurous Musk Rat \u{2743} WEB115 \u{2743} Home";
   }
 };
 
