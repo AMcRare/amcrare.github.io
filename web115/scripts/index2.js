@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 });
 
 const updatePageTitle = (destination) => {
-  switch(destination) {
+  switch (destination) {
     case 'components/index.html':
       document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
       break;
@@ -61,7 +61,7 @@ const updatePageTitle = (destination) => {
 };
 
 const updateSecondaryStylesheet = (destination) => {
-  switch(destination) {
+  switch (destination) {
     case 'components/brandboard.html':
       secondaryStylesheet.setAttribute('href', 'styles/brandStyles.css');
       break;
@@ -94,7 +94,7 @@ const updateSecondaryScript = (destination) => {
   }
   const newScript = document.createElement('script');
   newScript.id = 'dynamic-script';
-  switch(destination) {
+  switch (destination) {
     case 'components/fizzbuzz0.html':
       newScript.src = 'scripts/fizzbuzz0.js';
       break;
@@ -118,16 +118,7 @@ const updateSecondaryScript = (destination) => {
   }
   const scriptContainer = document.getElementById('dynamicScriptContainer');
   scriptContainer.appendChild(newScript);
-}
-const handleNavigation = async (event) => {
-  console.log("Navigation event fired", event.currentTarget);
-  event.preventDefault();
-  const destination = event.currentTarget.getAttribute('data-destination');
-  const hash = event.target.id;
-  console.log(`Navigating to ${destination} with hash ${hash}`);
-  await handleHTMLUpdate(destination);
-  window.location.hash = hash;
-}
+};
 
 const handleHTMLUpdate = async (destination) => {
   const response = await fetch(destination);
@@ -144,14 +135,24 @@ const handleHTMLUpdate = async (destination) => {
     destination === 'components/intro_form.html') {
       updateSecondaryScript(destination);
   }
-}
+};
 
-document.querySelectorAll('nav [role="button"]').forEach(link => {
+const handleNavigation = async (event) => {
+  console.log("Navigation event fired", event.currentTarget);
+  event.preventDefault();
+  const destination = event.currentTarget.getAttribute('data-destination');
+  const hash = event.target.id;
+  console.log(`Navigating to ${destination} with hash ${hash}`);
+  await handleHTMLUpdate(destination);
+  window.location.hash = hash;
+};
+
+document.querySelectorAll('nav [role="button"]').forEach((link) => {
   link.addEventListener('click', handleNavigation);
   console.log("fired1");
 });
 
-document.querySelectorAll('span [role="button"]').forEach(link => {
+document.querySelectorAll('span [role="button"]').forEach((link) => {
   link.addEventListener('click', handleNavigation);
   console.log("fired2");
 });
