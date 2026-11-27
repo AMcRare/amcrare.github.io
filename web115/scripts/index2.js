@@ -2,21 +2,6 @@ const secondaryStylesheet = document.getElementById('secondary-stylesheet');
 
 const mainContent = document.getElementById('main-content');
 
-window.addEventListener('DOMContentLoaded', async() => {
-  const hash = window.location.hash;
-  if (hash === '#home' || hash === '') {
-    document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
-    const response = await fetch('components/index.html');
-    window.location.hash = '#home';
-    const newHtml = await response.text();
-    mainContent.innerHTML = newHtml;
-    secondaryStylesheet.setAttribute('href', '');
-  } else {
-    const destination = `components/${hash.substring(1)}.html`;
-    handleHTMLUpdate(destination);
-  }
-});
-
 const updatePageTitle = (destination) => {
   switch (destination) {
     case 'components/index.html':
@@ -155,4 +140,19 @@ document.querySelectorAll('nav [role="button"]').forEach((link) => {
 document.querySelectorAll('span [role="button"]').forEach((link) => {
   link.addEventListener('click', handleNavigation);
   console.log("fired2");
+});
+
+window.addEventListener('DOMContentLoaded', async() => {
+  const hash = window.location.hash;
+  if (hash === '#home' || hash === '') {
+    document.title = "Angela McCrary-Roffis's Adventurous Musk Rat &#10051; WEB115 &#10051; Home";
+    const response = await fetch('components/index.html');
+    window.location.hash = '#home';
+    const newHtml = await response.text();
+    mainContent.innerHTML = newHtml;
+    secondaryStylesheet.setAttribute('href', '');
+  } else {
+    const destination = `components/${hash.substring(1)}.html`;
+    handleHTMLUpdate(destination);
+  }
 });
